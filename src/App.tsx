@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="main">
             <AppContext.Provider value={{}}>
-                {/* <SideMenu /> */}
+                <SideMenu />
                 <Router />
             </AppContext.Provider>
         </div>
