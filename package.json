@@ -23,6 +23,8 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -49,6 +51,8 @@
     "devDependencies": {
         "@types/leaflet": "^1.7.11",
         "@types/react-leaflet": "^2.8.2",
-        "@types/react-svg-map": "^2.1.2"
-    }
+        "@types/react-svg-map": "^2.1.2",
+        "gh-pages": "^5.0.0"
+    },
+    "homepage": "https://tsuzumic.github.io/aegis-web-app"
 }
