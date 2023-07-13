@@ -9,11 +9,14 @@ import ResidentialSVG from "map-svgs/Residential.svg";
 import SpecialSVG from "map-svgs/Special.svg";
 
 const StartPage: React.FC = (props) => {
-    return <SVGMap map={Cultural} />;
+    return <div>Start Page</div>;
 };
 
 export default StartPage;
 
+{
+    /* <SVGMap map={Cultural} /> */
+}
 {
     /* <TransformWrapper
                 initialScale={1}

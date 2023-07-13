@@ -1,0 +1,95 @@
+@import "~style/vars";
+
+.modal-manager {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding: 0 $modalHeightMargin * 1px;
+
+    z-index: $modalManagerBaseZIndex;
+
+    @media screen and (min-width: 576px) {
+        padding: 0 $modalHeightMargin_576 * 1px;
+    }
+
+    @media screen and (min-width: 992px) {
+        padding: 0 $modalHeightMargin_992 * 1px;
+    }
+
+    &--list {
+        position: relative;
+
+        width: 100%;
+
+        height: inherit;
+
+        margin: 0 auto;
+
+        z-index: $modalManagerBaseZIndex + 100;
+
+        pointer-events: none;
+    }
+    &--item {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        height: $modalMaxHeight;
+
+        overflow: hidden;
+
+        @media screen and (min-width: 576px) {
+            height: $modalMaxHeight_576;
+
+            margin: $modalHeightMargin_576 * 1px auto;
+        }
+
+        @media screen and (min-width: 992px) {
+            height: $modalMaxHeight_992;
+
+            margin: $modalHeightMargin_992 * 1px auto;
+        }
+
+        &.top-item {
+            .modal-manager--modal-content {
+                margin: 0 auto;
+            }
+        }
+
+        &--backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: $modalManagerBaseZIndex + 50;
+            width: 100%;
+            height: 100%;
+            background: #070707;
+
+            opacity: 0.6;
+
+            pointer-events: auto;
+        }
+    }
+
+    &--backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: $modalManagerBaseZIndex + 50;
+        width: 100vw;
+        height: 100vh;
+        background: #070707;
+
+        opacity: 0.6;
+    }
+}

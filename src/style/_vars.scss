@@ -1,0 +1,21 @@
+/* 
+@import "~style/vars";
+
+ */
+
+$modalHeightMargin: 5;
+$modalHeightMargin_576: 7;
+$modalHeightMargin_992: 15;
+
+$modalMaxHeight: calc(100vh - $modalHeightMargin * 2 * 1px);
+$modalMaxHeight_576: calc(100vh - $modalHeightMargin_576 * 2 * 1px);
+$modalMaxHeight_992: calc(100vh - $modalHeightMargin_992 * 2 * 1px);
+
+$modalMaxWidth: 1090px;
+
+$responsiveSizeSmall: 575px;
+$responsiveSizeMedium: 800px;
+$responsiveSizeLarge: 1090px;
+$responsiveSizeXLarge: 1200px;
+
+$modalManagerBaseZIndex: 10000;
