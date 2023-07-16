@@ -2,8 +2,9 @@ import "./ModalStyle.scss";
 
 import React from "react";
 import ModalItem from "./ModalItem";
-import { IIdModalListItems, IModalRenderer } from "../api/IModalManager";
+
 import { ModalByType } from "./ModalByType";
+import { IIdModalListItems } from "../models/ModalMangerModels";
 
 interface IProps {
     modalList: IIdModalListItems;

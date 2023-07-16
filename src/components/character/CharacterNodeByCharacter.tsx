@@ -1,6 +1,7 @@
-import { CharacterList, TCharacters } from "content/characters/Characters";
+import { TCharacters } from "content/characters/Characters";
 import CharacterNode from "./CharacterNode";
 import { getImage } from "components/utility/images";
+import CharacterList from "content/characters/list/CharacterList";
 
 interface IProps {
     character: TCharacters;
@@ -13,6 +14,10 @@ const CharacterNodeByCharacter = (props: IProps) => {
     const handleOnClick = () => {
         props.onClick(props.character);
     };
+
+    if (!character) {
+        return null;
+    }
 
     return (
         <CharacterNode

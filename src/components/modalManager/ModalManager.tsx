@@ -221,8 +221,6 @@ const ModalManager: React.FC<React.PropsWithChildren> = (props) => {
     };
 
     const handleOnBackgroundClick = () => {
-        console.log("handleOnBackgroundClick");
-
         if (topId) {
             handleOnCloseModal({ callId: topId });
         }

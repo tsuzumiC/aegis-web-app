@@ -12,28 +12,13 @@ import {
 import { useLocation } from "react-router-dom";
 import CharacterNodeByCharacter from "components/character/CharacterNodeByCharacter";
 import { Characters, TCharacters } from "content/characters/Characters";
+import FamilyTree from "components/flowchart/FamilyTree";
 
 const HlaarPage = () => {
-    const modalManagerContext = useContext(ModalManagerContext);
-
-    const location = useLocation();
-
-    const handleOnShowModal = (character: TCharacters) => {
-        const payload: IShowModalPayload = {
-            id: character,
-            type: ModalTypes.character,
-            callerAddress: location.pathname,
-        };
-        modalManagerContext.onShowModal(payload);
-    };
     return (
         <div className="hlaar-page">
             <h1>The Hlaar's</h1>
-
-            <CharacterNodeByCharacter
-                character={Characters.Zeenel_Hlaar}
-                onClick={handleOnShowModal}
-            />
+            <FamilyTree />
         </div>
     );
 };
