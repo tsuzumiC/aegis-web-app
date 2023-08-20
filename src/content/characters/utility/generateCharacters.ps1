@@ -1,5 +1,5 @@
 $characters = @{
-    Alani_And_Annie_Hlaar = "Alani and Annie Hlaar"
+    Alani_And_Annie_Hlaar = "Alani And Annie Hlaar"
     Amber_Hlaar           = "Amber Hlaar"
     Ayenda                = "Ayenda"
     Azmah                 = "Azmah"
@@ -12,7 +12,7 @@ $characters = @{
     Esfir                 = "Esfir"
     Fanaa_Hlaar           = "Fanaa Hlaar"
     Fylae_Hlaar           = "Fylae Hlaar"
-    Gawen_And_Gwain_Hlaar = "Gawen and Gwain Hlaar"
+    Gawen_And_Gwain_Hlaar = "Gawen And Gwain Hlaar"
     Ghan                  = "Ghan"
     Ginger_Hlaar          = "Ginger Hlaar"
     Haru_Hlaar            = "Haru Hlaar"
@@ -56,12 +56,12 @@ $characters = @{
 
 $pairCharacters = @{
     Alani_And_Annie_Hlaar = @( 
-        @{ Alani_And_Annie_Hlaar = "Alani and Annie Hlaar" },
+        @{ Alani_And_Annie_Hlaar = "Alani And Annie Hlaar" },
         @{ Alani_Hlaar = "Alani Hlaar" },
         @{ Annie_Hlaar = "Annie Hlaar" }
     )
     Gawen_And_Gwain_Hlaar = @(
-        @{ Gawen_And_Gwain_Hlaar = "Gawen and Gwain Hlaar" },
+        @{ Gawen_And_Gwain_Hlaar = "Gawen And Gwain Hlaar" },
         @{ Gawen_Hlaar = "Gawen Hlaar" },
         @{ Gwain_Hlaar = "Gwain Hlaar" }
     )
