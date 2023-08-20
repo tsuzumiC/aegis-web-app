@@ -1,10 +1,13 @@
 .side-menu {
     display: flex;
     flex-direction: column;
+    flex: none;
 
     width: 100px;
 
     height: 100%;
+
+    margin-right: 10px;
 
     &.open {
         width: 250px;

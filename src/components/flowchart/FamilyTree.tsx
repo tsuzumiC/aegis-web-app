@@ -108,14 +108,14 @@ const testPath: IPath = {
 export interface IFlowchartProps {}
 
 const firstRow = [
-    Characters.Robin_Hemingway,
+    Characters.RobinHemingway,
     Characters.Risaria,
     Characters.Tarluk,
     Characters.Azmah,
-    Characters.Shilli_Akehurst,
+    Characters.ShilliAkehurst,
     Characters.Seori,
-    Characters.Marnie_Bryne,
-    Characters.Lael_Caerl,
+    Characters.MarnieBryne,
+    Characters.LaelCaerl,
 ];
 const FamilyTree = (props: PropsWithRef<IFlowchartProps>) => {
     const modalManagerContext = useContext(ModalManagerContext);

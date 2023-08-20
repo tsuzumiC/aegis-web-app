@@ -6,6 +6,7 @@ const SideMenu: React.FC = (props) => {
         <div className="side-menu">
             <Link to="/">Start</Link>
             <Link to="/hlaar">Hlaar</Link>
+            <Link to="/all-characters">All Characters</Link>
         </div>
     );
 };

@@ -11,7 +11,7 @@ const AppContext = createContext({});
 
 function App() {
     return (
-        <div className="main">
+        <div className="app">
             <AppContext.Provider value={{}}>
                 <BrowserRouter
                     basename={
@@ -22,7 +22,9 @@ function App() {
                 >
                     <ModalManager>
                         <SideMenu />
-                        <Router />
+                        <div className="main-content">
+                            <Router />
+                        </div>
                     </ModalManager>
                 </BrowserRouter>
             </AppContext.Provider>

@@ -1,7 +1,7 @@
 import { TCharacters } from "content/characters/Characters";
 import CharacterNode from "./CharacterNode";
 import { getImage } from "components/utility/images";
-import CharacterList from "content/characters/list/CharacterList";
+import { CharacterList } from "content/characters/CharacterList";
 
 interface IProps {
     character: TCharacters;

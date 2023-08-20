@@ -1,4 +1,4 @@
-.main {
+.app {
     display: flex;
     flex-direction: row;
 
@@ -6,4 +6,12 @@
     height: 100%;
 
     overflow: auto;
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+
+        overflow: auto;
+    }
 }

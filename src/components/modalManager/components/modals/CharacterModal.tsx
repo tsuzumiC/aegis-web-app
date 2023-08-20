@@ -7,8 +7,8 @@ import {
     TModalListTypes,
 } from "components/modalManager/models/ModalMangerModels";
 import { getImage } from "components/utility/images";
+import { CharacterList } from "content/characters/CharacterList";
 
-import CharacterList from "content/characters/list/CharacterList";
 import { PropsWithRef, useContext } from "react";
 
 interface IProps<T extends keyof TModalListTypes> {
