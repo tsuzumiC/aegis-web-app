@@ -3,8 +3,8 @@
 const Seori: ICharacter = {
   id: "seori",
   name: "Seori",
-  avatar: { ref: "/hlaar/Seori_treeAvatar.jpg", alt: "Seori" },
-  mainImage: { ref: "/hlaar/Seori_ref.jpg", alt: "Seori" }
+  avatar: { ref: "/characters/Seori/Seori_treeAvatar.jpg", alt: "Seori" },
+  mainImage: { ref: "/characters/Seori/Seori_ref.jpg", alt: "Seori" }
 };
 
 export default Seori;

@@ -3,8 +3,8 @@
 const Azmah: ICharacter = {
   id: "azmah",
   name: "Azmah",
-  avatar: { ref: "/hlaar/Azmah_treeAvatar.jpg", alt: "Azmah" },
-  mainImage: { ref: "/hlaar/Azmah_ref.jpg", alt: "Azmah" }
+  avatar: { ref: "/characters/Azmah/Azmah_treeAvatar.jpg", alt: "Azmah" },
+  mainImage: { ref: "/characters/Azmah/Azmah_ref.jpg", alt: "Azmah" }
 };
 
 export default Azmah;
