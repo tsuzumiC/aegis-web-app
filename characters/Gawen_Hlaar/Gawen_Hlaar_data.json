@@ -1,0 +1,15 @@
+{
+    "id": "gawenHlaar",
+    "path": "Gawen_Hlaar",
+    "name": "Gawen Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Gawen_Hlaar/Gawen_Hlaar_treeAvatar.jpg",
+        "alt": "Gawen Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Gawen_Hlaar/Gawen_Hlaar_ref.jpg",
+        "alt": "Gawen Hlaar"
+    }
+}

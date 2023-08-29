@@ -1,0 +1,15 @@
+{
+    "id": "fylaeHlaar",
+    "path": "Fylae_Hlaar",
+    "name": "Fylae Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Fylae_Hlaar/Fylae_Hlaar_treeAvatar.jpg",
+        "alt": "Fylae Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Fylae_Hlaar/Fylae_Hlaar_ref.jpg",
+        "alt": "Fylae Hlaar"
+    }
+}

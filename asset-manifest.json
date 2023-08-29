@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/aegis-web-app/static/css/main.a07b8b63.css",
-    "main.js": "/aegis-web-app/static/js/main.a6d56707.js",
+    "main.css": "/aegis-web-app/static/css/main.c87f200a.css",
+    "main.js": "/aegis-web-app/static/js/main.05d6d95d.js",
     "static/js/27.f59aad1f.chunk.js": "/aegis-web-app/static/js/27.f59aad1f.chunk.js",
     "index.html": "/aegis-web-app/index.html"
   },
   "entrypoints": [
-    "static/css/main.a07b8b63.css",
-    "static/js/main.a6d56707.js"
+    "static/css/main.c87f200a.css",
+    "static/js/main.05d6d95d.js"
   ]
 }

@@ -1,0 +1,15 @@
+{
+    "id": "millieHlaar",
+    "path": "Millie_Hlaar",
+    "name": "Millie Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Millie_Hlaar/Millie_Hlaar_treeAvatar.jpg",
+        "alt": "Millie Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Millie_Hlaar/Millie_Hlaar_ref.jpg",
+        "alt": "Millie Hlaar"
+    }
+}

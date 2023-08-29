@@ -1,0 +1,15 @@
+{
+    "id": "naamahHlaar",
+    "path": "Naamah_Hlaar",
+    "name": "Naamah Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Naamah_Hlaar/Naamah_Hlaar_treeAvatar.jpg",
+        "alt": "Naamah Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Naamah_Hlaar/Naamah_Hlaar_ref.jpg",
+        "alt": "Naamah Hlaar"
+    }
+}

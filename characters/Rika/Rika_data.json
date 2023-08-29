@@ -1,0 +1,15 @@
+{
+    "id": "rika",
+    "path": "Rika",
+    "name": "Rika",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Rika/Rika_treeAvatar.jpg",
+        "alt": "Rika"
+    },
+    "mainImage": {
+        "ref": "/characters/Rika/Rika_ref.jpg",
+        "alt": "Rika"
+    }
+}

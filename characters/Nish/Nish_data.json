@@ -1,0 +1,15 @@
+{
+    "id": "nish",
+    "path": "Nish",
+    "name": "Nish",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Nish/Nish_treeAvatar.jpg",
+        "alt": "Nish"
+    },
+    "mainImage": {
+        "ref": "/characters/Nish/Nish_ref.jpg",
+        "alt": "Nish"
+    }
+}

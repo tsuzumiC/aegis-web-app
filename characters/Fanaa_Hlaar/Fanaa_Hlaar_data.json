@@ -1,0 +1,15 @@
+{
+    "id": "fanaaHlaar",
+    "path": "Fanaa_Hlaar",
+    "name": "Fanaa Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Fanaa_Hlaar/Fanaa_Hlaar_treeAvatar.jpg",
+        "alt": "Fanaa Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Fanaa_Hlaar/Fanaa_Hlaar_ref.jpg",
+        "alt": "Fanaa Hlaar"
+    }
+}

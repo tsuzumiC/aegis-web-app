@@ -1,0 +1,15 @@
+{
+    "id": "risaria",
+    "path": "Risaria",
+    "name": "Risaria",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Risaria/Risaria_treeAvatar.jpg",
+        "alt": "Risaria"
+    },
+    "mainImage": {
+        "ref": "/characters/Risaria/Risaria_ref.jpg",
+        "alt": "Risaria"
+    }
+}

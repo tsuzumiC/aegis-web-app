@@ -1,0 +1,15 @@
+{
+    "id": "miikeeno",
+    "path": "Miikeeno",
+    "name": "Miikeeno",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Miikeeno/Miikeeno_treeAvatar.jpg",
+        "alt": "Miikeeno"
+    },
+    "mainImage": {
+        "ref": "/characters/Miikeeno/Miikeeno_ref.jpg",
+        "alt": "Miikeeno"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": "lilyHlaar",
+    "path": "Lily_Hlaar",
+    "name": "Lily Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Lily_Hlaar/Lily_Hlaar_treeAvatar.jpg",
+        "alt": "Lily Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Lily_Hlaar/Lily_Hlaar_ref.jpg",
+        "alt": "Lily Hlaar"
+    }
+}

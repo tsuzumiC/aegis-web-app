@@ -1,0 +1,15 @@
+{
+    "id": "isisBrooks",
+    "path": "Isis_Brooks",
+    "name": "Isis Brooks",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Isis_Brooks/Isis_Brooks_treeAvatar.jpg",
+        "alt": "Isis Brooks"
+    },
+    "mainImage": {
+        "ref": "/characters/Isis_Brooks/Isis_Brooks_ref.jpg",
+        "alt": "Isis Brooks"
+    }
+}

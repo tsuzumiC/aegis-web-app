@@ -1,0 +1,15 @@
+{
+    "id": "annieHlaar",
+    "path": "Annie_Hlaar",
+    "name": "Annie Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Annie_Hlaar/Annie_Hlaar_treeAvatar.jpg",
+        "alt": "Annie Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Annie_Hlaar/Annie_Hlaar_ref.jpg",
+        "alt": "Annie Hlaar"
+    }
+}

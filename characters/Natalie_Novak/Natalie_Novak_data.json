@@ -1,0 +1,15 @@
+{
+    "id": "natalieNovak",
+    "path": "Natalie_Novak",
+    "name": "Natalie Novak",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Natalie_Novak/Natalie_Novak_treeAvatar.jpg",
+        "alt": "Natalie Novak"
+    },
+    "mainImage": {
+        "ref": "/characters/Natalie_Novak/Natalie_Novak_ref.jpg",
+        "alt": "Natalie Novak"
+    }
+}

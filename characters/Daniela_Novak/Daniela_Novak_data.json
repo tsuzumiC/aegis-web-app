@@ -1,0 +1,15 @@
+{
+    "id": "danielaNovak",
+    "path": "Daniela_Novak",
+    "name": "Daniela Novak",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Daniela_Novak/Daniela_Novak_treeAvatar.jpg",
+        "alt": "Daniela Novak"
+    },
+    "mainImage": {
+        "ref": "/characters/Daniela_Novak/Daniela_Novak_ref.jpg",
+        "alt": "Daniela Novak"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": "lolaHlaar",
+    "path": "Lola_Hlaar",
+    "name": "Lola Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Lola_Hlaar/Lola_Hlaar_treeAvatar.jpg",
+        "alt": "Lola Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Lola_Hlaar/Lola_Hlaar_ref.jpg",
+        "alt": "Lola Hlaar"
+    }
+}
