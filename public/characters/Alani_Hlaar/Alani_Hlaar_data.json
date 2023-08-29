@@ -1,0 +1,15 @@
+{
+    "id": "alaniHlaar",
+    "path": "Alani_Hlaar",
+    "name": "Alani Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Alani_Hlaar/Alani_Hlaar_treeAvatar.jpg",
+        "alt": "Alani Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Alani_Hlaar/Alani_Hlaar_ref.jpg",
+        "alt": "Alani Hlaar"
+    }
+}

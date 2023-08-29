@@ -1,0 +1,15 @@
+{
+    "id": "pavlaNovakHlaar",
+    "path": "Pavla_Novak_Hlaar",
+    "name": "Pavla Novak Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Pavla_Novak_Hlaar/Pavla_Novak_Hlaar_treeAvatar.jpg",
+        "alt": "Pavla Novak Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Pavla_Novak_Hlaar/Pavla_Novak_Hlaar_ref.jpg",
+        "alt": "Pavla Novak Hlaar"
+    }
+}

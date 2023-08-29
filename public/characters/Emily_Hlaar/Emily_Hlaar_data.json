@@ -1,0 +1,15 @@
+{
+    "id": "emilyHlaar",
+    "path": "Emily_Hlaar",
+    "name": "Emily Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Emily_Hlaar/Emily_Hlaar_treeAvatar.jpg",
+        "alt": "Emily Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Emily_Hlaar/Emily_Hlaar_ref.jpg",
+        "alt": "Emily Hlaar"
+    }
+}

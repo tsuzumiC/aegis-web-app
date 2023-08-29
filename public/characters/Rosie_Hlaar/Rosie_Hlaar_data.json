@@ -1,0 +1,15 @@
+{
+    "id": "rosieHlaar",
+    "path": "Rosie_Hlaar",
+    "name": "Rosie Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Rosie_Hlaar/Rosie_Hlaar_treeAvatar.jpg",
+        "alt": "Rosie Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Rosie_Hlaar/Rosie_Hlaar_ref.jpg",
+        "alt": "Rosie Hlaar"
+    }
+}

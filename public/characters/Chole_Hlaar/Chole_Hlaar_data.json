@@ -1,0 +1,15 @@
+{
+    "id": "choleHlaar",
+    "path": "Chole_Hlaar",
+    "name": "Chole Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Chole_Hlaar/Chole_Hlaar_treeAvatar.jpg",
+        "alt": "Chole Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Chole_Hlaar/Chole_Hlaar_ref.jpg",
+        "alt": "Chole Hlaar"
+    }
+}

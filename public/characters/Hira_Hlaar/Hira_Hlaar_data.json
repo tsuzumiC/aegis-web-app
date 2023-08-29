@@ -1,0 +1,15 @@
+{
+    "id": "hiraHlaar",
+    "path": "Hira_Hlaar",
+    "name": "Hira Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Hira_Hlaar/Hira_Hlaar_treeAvatar.jpg",
+        "alt": "Hira Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Hira_Hlaar/Hira_Hlaar_ref.jpg",
+        "alt": "Hira Hlaar"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": "angelaNovak",
+    "path": "Angela_Novak",
+    "name": "Angela Novak",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Angela_Novak/Angela_Novak_treeAvatar.jpg",
+        "alt": "Angela Novak"
+    },
+    "mainImage": {
+        "ref": "/characters/Angela_Novak/Angela_Novak_ref.jpg",
+        "alt": "Angela Novak"
+    }
+}

@@ -1,5 +1,4 @@
 import "./FamilyTree.scss";
-import { Characters, TCharacters } from "content/characters/Characters";
 
 import React, { PropsWithRef, useContext } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
@@ -107,31 +106,21 @@ const testPath: IPath = {
 
 export interface IFlowchartProps {}
 
-const firstRow = [
-    Characters.RobinHemingway,
-    Characters.Risaria,
-    Characters.Tarluk,
-    Characters.Azmah,
-    Characters.ShilliAkehurst,
-    Characters.Seori,
-    Characters.MarnieBryne,
-    Characters.LaelCaerl,
-];
 const FamilyTree = (props: PropsWithRef<IFlowchartProps>) => {
     const modalManagerContext = useContext(ModalManagerContext);
 
     const location = useLocation();
 
-    const handleOnShowModal = (character: TCharacters) => {
+    /*   const handleOnShowModal = (character: TCharacters) => {
         const payload: IShowModalPayload = {
             id: character,
             type: ModalTypes.character,
             callerAddress: location.pathname,
         };
         modalManagerContext.onShowModal(payload);
-    };
-    return (
-        <TransformWrapper
+    }; */
+    return {
+        /* <TransformWrapper
             initialScale={1}
             initialPositionX={0}
             initialPositionY={0}
@@ -160,8 +149,8 @@ const FamilyTree = (props: PropsWithRef<IFlowchartProps>) => {
                     </div>
                 </React.Fragment>
             )}
-        </TransformWrapper>
-    );
+        </TransformWrapper> */
+    };
 };
 
 export default FamilyTree;

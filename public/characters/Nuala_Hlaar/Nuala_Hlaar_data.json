@@ -1,0 +1,15 @@
+{
+    "id": "nualaHlaar",
+    "path": "Nuala_Hlaar",
+    "name": "Nuala Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Nuala_Hlaar/Nuala_Hlaar_treeAvatar.jpg",
+        "alt": "Nuala Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Nuala_Hlaar/Nuala_Hlaar_ref.jpg",
+        "alt": "Nuala Hlaar"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": "shadiHlaar",
+    "path": "Shadi_Hlaar",
+    "name": "Shadi Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Shadi_Hlaar/Shadi_Hlaar_treeAvatar.jpg",
+        "alt": "Shadi Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Shadi_Hlaar/Shadi_Hlaar_ref.jpg",
+        "alt": "Shadi Hlaar"
+    }
+}

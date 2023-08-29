@@ -1,7 +1,7 @@
 import { TCharacters } from "content/characters/Characters";
 import CharacterNode from "./CharacterNode";
-import { getImage } from "components/utility/images";
-import { CharacterList } from "content/characters/CharacterList";
+import { getLocalFile } from "components/utility/getLocalFile";
+import { useGetCharacterById } from "content/characters/api/hooks";
 
 interface IProps {
     character: TCharacters;
@@ -9,7 +9,7 @@ interface IProps {
 }
 
 const CharacterNodeByCharacter = (props: IProps) => {
-    const character = CharacterList[props.character];
+    const { data: character } = useGetCharacterById(props.character);
 
     const handleOnClick = () => {
         props.onClick(props.character);
@@ -24,7 +24,7 @@ const CharacterNodeByCharacter = (props: IProps) => {
             title={character.name}
             avatar={
                 <img
-                    src={getImage(character.avatar?.ref)}
+                    src={getLocalFile(character.avatar?.ref)}
                     alt={character.avatar?.alt}
                 />
             }

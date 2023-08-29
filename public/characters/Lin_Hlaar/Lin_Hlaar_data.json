@@ -1,0 +1,15 @@
+{
+    "id": "linHlaar",
+    "path": "Lin_Hlaar",
+    "name": "Lin Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Lin_Hlaar/Lin_Hlaar_treeAvatar.jpg",
+        "alt": "Lin Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Lin_Hlaar/Lin_Hlaar_ref.jpg",
+        "alt": "Lin Hlaar"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": "zildaHlaar",
+    "path": "Zilda_Hlaar",
+    "name": "Zilda Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Zilda_Hlaar/Zilda_Hlaar_treeAvatar.jpg",
+        "alt": "Zilda Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Zilda_Hlaar/Zilda_Hlaar_ref.jpg",
+        "alt": "Zilda Hlaar"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": "elalieHlaar",
+    "path": "Elalie_Hlaar",
+    "name": "Elalie Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Elalie_Hlaar/Elalie_Hlaar_treeAvatar.jpg",
+        "alt": "Elalie Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Elalie_Hlaar/Elalie_Hlaar_ref.jpg",
+        "alt": "Elalie Hlaar"
+    }
+}

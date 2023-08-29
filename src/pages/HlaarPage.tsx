@@ -1,6 +1,6 @@
 import Character from "components/character/Character";
 import "./HlaarPage.scss";
-import { getImage } from "components/utility/images";
+import { getLocalFile } from "components/utility/getLocalFile";
 import CharacterNode from "components/character/CharacterNode";
 import { useContext } from "react";
 import { ModalManagerContext } from "components/modalManager/ModalManager";

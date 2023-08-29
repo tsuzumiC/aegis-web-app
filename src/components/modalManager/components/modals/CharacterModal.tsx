@@ -6,8 +6,8 @@ import {
     IModalListItem,
     TModalListTypes,
 } from "components/modalManager/models/ModalMangerModels";
-import { getImage } from "components/utility/images";
-import { CharacterList } from "content/characters/CharacterList";
+import { getLocalFile } from "components/utility/getLocalFile";
+import { useGetCharacterById } from "content/characters/api/hooks";
 
 import { PropsWithRef, useContext } from "react";
 
@@ -24,7 +24,11 @@ const CharacterModal = <T extends keyof TModalListTypes>(
 
     const modalManagerContext = useContext(ModalManagerContext);
 
-    const character = id ? CharacterList[id] : undefined;
+    const { data: character } = useGetCharacterById(id);
+
+    if (!character) {
+        return null;
+    }
 
     const handleOnClose = (onSave?: boolean) => {
         modalManagerContext.onCloseModal({ callId, onSave });
@@ -44,7 +48,7 @@ const CharacterModal = <T extends keyof TModalListTypes>(
                 title={character.name}
                 mainImage={
                     <img
-                        src={getImage(character.mainImage?.ref)}
+                        src={getLocalFile(character.mainImage?.ref)}
                         alt={character.mainImage?.alt}
                     />
                 }

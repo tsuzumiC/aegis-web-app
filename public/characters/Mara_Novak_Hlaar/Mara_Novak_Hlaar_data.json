@@ -1,0 +1,15 @@
+{
+    "id": "maraNovakHlaar",
+    "path": "Mara_Novak_Hlaar",
+    "name": "Mara Novak Hlaar",
+    "type": "",
+    "gender": "",
+    "avatar": {
+        "ref": "/characters/Mara_Novak_Hlaar/Mara_Novak_Hlaar_treeAvatar.jpg",
+        "alt": "Mara Novak Hlaar"
+    },
+    "mainImage": {
+        "ref": "/characters/Mara_Novak_Hlaar/Mara_Novak_Hlaar_ref.jpg",
+        "alt": "Mara Novak Hlaar"
+    }
+}
