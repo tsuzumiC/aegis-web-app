@@ -6,6 +6,7 @@ import axios from "axios";
 
 import CharacterListItem from "components/character/CharacterListItem";
 import { ICharacter, ICharacterListItem } from "content/characters/Characters";
+import { getLocalFilePath } from "components/utility/getLocalFile";
 
 const AllCharactersPage: React.FC = () => {
     const [searchField, setSearchField] = useState("");
@@ -39,7 +40,9 @@ const AllCharactersPage: React.FC = () => {
 
     const fetchCharacterList = async () => {
         try {
-            const response = await axios.get("/CharacterList.json");
+            const response = await axios.get(
+                getLocalFilePath("/CharacterList.json") ?? ""
+            );
             const data = response.data as ICharacterListItem[];
             setCharacterList(data);
         } catch (error) {
@@ -51,7 +54,9 @@ const AllCharactersPage: React.FC = () => {
         try {
             const characterDataPromises = characters.map(async (character) => {
                 const response = await axios.get(
-                    `/characters/${character.path}/${character.path}.data.json`
+                    getLocalFilePath(
+                        `/characters/${character.path}/${character.path}.data.json`
+                    ) ?? ""
                 );
                 return response.data as ICharacter;
             });
