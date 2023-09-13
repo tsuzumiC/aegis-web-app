@@ -24,8 +24,11 @@ const CharacterListItem = (props: IProps) => {
     return (
         <div className="character-list-item">
             <div className="character-list-item--info">
-                <div className="character-list-item--title">
+                <div className="character-list-item--name">
                     {character.name}
+                    <div className="character-list-item--full-name">
+                        {character.fullName}
+                    </div>
                 </div>
                 <div className="character-list-item--description">
                     <p>{character.appearance}</p>
