@@ -22,10 +22,16 @@ export interface ICharacter {
     id: string;
     path: string;
     name: string;
-    type: ECharacterType;
+    fullName: string;
+    firstName: string;
+    lastName: string;
+    appearance: string;
+    bio: string;
+}
+
+export interface ICharacterListItem {
+    id: string;
+    name: string;
+    path: string;
     avatar?: IImageProps;
-    mainImage?: IImageProps;
-    gender?: TGender;
-    children?: ICharacterLink[];
-    parents?: ICharacterLink[];
 }

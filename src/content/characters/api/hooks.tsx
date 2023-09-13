@@ -1,13 +1,35 @@
-import { getLocalFile } from "components/utility/getLocalFile";
-import { ICharacter } from "../Characters";
+import { getLocalFilePath } from "components/utility/getLocalFile";
+import { ICharacter, ICharacterListItem } from "../Characters";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { ITableSetWithOptions } from "models/ITableSet";
 
+export const useGetCharacters = (characterPaths: string[]) => {
+    const fetchCharacterPromises = characterPaths.map(async (characterPath) => {
+        const url =
+            getLocalFilePath(
+                `/characters/${characterPath}/${characterPath}.data.json`
+            ) ?? "";
+
+        const response = await axios.get(url);
+
+        return response.data as ICharacter;
+    });
+
+    return useQuery(
+        ["get-character", characterPaths],
+        () => Promise.all(fetchCharacterPromises),
+        {
+            enabled: characterPaths.length > 0,
+            refetchOnWindowFocus: false,
+        }
+    );
+};
+
 export const useGetCharacterById = (characterPath?: string) => {
     const url =
-        getLocalFile(
-            `/characters/${characterPath}/${characterPath}_data.json`
+        getLocalFilePath(
+            `/characters/${characterPath}/${characterPath}.data.json`
         ) ?? "";
 
     return useQuery(
@@ -23,36 +45,26 @@ export const useGetCharacterById = (characterPath?: string) => {
         },
         {
             enabled: !!characterPath,
+            refetchOnWindowFocus: false,
         }
     );
 };
 
 export const useGetCharacterList = () => {
-    const url = getLocalFile(`/characters/Characters.json`) ?? "";
+    const url = getLocalFilePath(`/CharacterList.json`) ?? "";
 
-    return useQuery(["get-character-list"], async (context) => {
-        const response = await axios.get(url, {
-            signal: context.signal,
-        });
+    return useQuery(
+        ["get-character-list"],
+        async (context) => {
+            const response = await axios.get(url, {
+                signal: context.signal,
+            });
 
-        const characterList = response.data.characterList as Record<
-            string,
-            string
-        >;
-        if (characterList) {
-            const tableSet = Object.keys(characterList).reduce<
-                ITableSetWithOptions<string>
-            >(
-                (acc, id) => {
-                    acc.ids.push(id);
-                    acc.values[id] = characterList[id];
-                    acc.options.push({ id, value: characterList[id] });
-                    return acc;
-                },
-                { ids: [], values: {}, options: [] }
-            );
-
-            return tableSet;
-        }
-    });
+            const characterList = response.data as ICharacterListItem[];
+            if (characterList) {
+                return characterList;
+            }
+        },
+        { refetchOnWindowFocus: true }
+    );
 };

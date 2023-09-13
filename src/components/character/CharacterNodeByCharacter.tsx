@@ -1,6 +1,6 @@
 import { TCharacters } from "content/characters/Characters";
 import CharacterNode from "./CharacterNode";
-import { getLocalFile } from "components/utility/getLocalFile";
+import { getLocalFilePath } from "components/utility/getLocalFile";
 import { useGetCharacterById } from "content/characters/api/hooks";
 
 interface IProps {
@@ -24,7 +24,7 @@ const CharacterNodeByCharacter = (props: IProps) => {
             title={character.name}
             avatar={
                 <img
-                    src={getLocalFile(character.avatar?.ref)}
+                    src={getLocalFilePath(character.avatar?.ref)}
                     alt={character.avatar?.alt}
                 />
             }

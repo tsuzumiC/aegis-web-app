@@ -2,7 +2,7 @@
 
 $sourceDirectory = "G:\Dropbox\RP\Aegis\Characters\Hlaar Family"
 $destinationDirectory = "I:\Aegis\aegis-web-app\public\characters"
-$filePatterns = "*_ref.jpg", "*_treeAvatar.jpg", "*_data.json" 
+$filePatterns = "*.ref.jpg", "*.treeAvatar.jpg", "*.data.json" 
 
 # Get a list of folders in the source directory
 $sourceFolders = Get-ChildItem -Path $sourceDirectory -Directory
@@ -17,6 +17,7 @@ foreach ($folder in $sourceFolders) {
         $_.Name -like $filePatterns[0] -or
         $_.Name -like $filePatterns[1] -or
         $_.Name -like $filePatterns[2]
+
     }
     
     foreach ($file in $filesToCopy) {

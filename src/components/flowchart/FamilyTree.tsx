@@ -1,17 +1,24 @@
 import "./FamilyTree.scss";
 
 import React, { PropsWithRef, useContext } from "react";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 import "reactflow/dist/style.css";
 
-import CharacterNodeByCharacter from "components/character/CharacterNodeByCharacter";
 import { ModalManagerContext } from "components/modalManager/ModalManager";
 import { useLocation } from "react-router-dom";
 import {
     IShowModalPayload,
     ModalTypes,
 } from "components/modalManager/models/ModalMangerModels";
+import {
+    ConnectionLineType,
+    Controls,
+    ReactFlow,
+    ReactFlowProvider,
+    Transform,
+} from "reactflow";
+import { Node } from "react-flow-renderer";
+import { FlowChartContext } from "./FlowChartContext";
 
 export interface IPosition {
     x: number;
@@ -104,6 +111,17 @@ const testPath: IPath = {
     ],
 };
 
+const defaultTransform: Transform = [0, 0, 1];
+
+const elements: Node[] = [
+    {
+        id: "1",
+        type: "input",
+        data: { label: "Input Node" },
+        position: { x: 250, y: 5 },
+    },
+];
+
 export interface IFlowchartProps {}
 
 const FamilyTree = (props: PropsWithRef<IFlowchartProps>) => {
@@ -119,38 +137,43 @@ const FamilyTree = (props: PropsWithRef<IFlowchartProps>) => {
         };
         modalManagerContext.onShowModal(payload);
     }; */
-    return {
-        /* <TransformWrapper
-            initialScale={1}
-            initialPositionX={0}
-            initialPositionY={0}
-        >
-            {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-                <React.Fragment>
-                    <TransformComponent
-                        wrapperClass="family-tree--wrapper"
-                        contentClass="family-tree--content"
-                    >
-                        <div className="family-tree">
-                            {firstRow.map((id) => (
-                                <div key={id}>
-                                    <CharacterNodeByCharacter
-                                        character={id}
-                                        onClick={handleOnShowModal}
-                                    />
-                                </div>
-                            ))}{" "}
-                        </div>
-                    </TransformComponent>
-                    <div className="tools">
-                        <button onClick={() => zoomIn()}>+</button>
-                        <button onClick={() => zoomOut()}>-</button>
-                        <button onClick={() => resetTransform()}>x</button>
-                    </div>
-                </React.Fragment>
-            )}
-        </TransformWrapper> */
+
+    const removeContextValue = {
+        onShowModal: () => {},
     };
+
+    return (
+        <div className="family-tree">
+            <FlowChartContext.Provider value={removeContextValue}>
+                <ReactFlowProvider>
+                    <svg className="hideSvgSoThatItSupportsFirefox">
+                        <filter id="dot-blur">
+                            <feGaussianBlur stdDeviation={1} />
+                        </filter>
+                    </svg>
+
+                    <ReactFlow
+                        nodes={elements}
+                        nodesDraggable={false}
+                        nodesFocusable={false}
+                        elementsSelectable={false}
+                        preventScrolling={false}
+                        connectionLineType={ConnectionLineType.SmoothStep}
+                        deleteKeyCode="Delete"
+                        multiSelectionKeyCode="Shift"
+                        zoomActivationKeyCode="Shift"
+                        minZoom={0}
+                        maxZoom={10}
+                    ></ReactFlow>
+
+                    <Controls
+                        style={{ bottom: "15px", left: "10px", zIndex: 15 }}
+                        showInteractive={false}
+                    ></Controls>
+                </ReactFlowProvider>
+            </FlowChartContext.Provider>
+        </div>
+    );
 };
 
 export default FamilyTree;
