@@ -135,6 +135,11 @@
     "path": "Hira,Fujimori_Hlaar"
   },
   {
+    "id": "ingaLogsteadHlaar",
+    "name": "Inga Logstead Hlaar",
+    "path": "Inga,Logstead_Hlaar"
+  },
+  {
     "id": "isisBrooks",
     "name": "Isis Brooks",
     "path": "Isis,Brooks"
