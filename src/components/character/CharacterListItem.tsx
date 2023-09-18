@@ -7,7 +7,7 @@ import {
 
 import EmptyImage from "components/EmptyImage";
 import { useGetCharacterById } from "content/characters/api/hooks";
-import { ICharacter } from "content/characters/Characters";
+import { AppearanceTypeOrder, ICharacter } from "content/characters/Characters";
 
 interface IProps {
     character: ICharacter;
@@ -31,8 +31,23 @@ const CharacterListItem = (props: IProps) => {
                     </div>
                 </div>
                 <div className="character-list-item--description">
-                    <p>{character.appearance}</p>
-                    <p>{character.bio}</p>
+                    <div className="value-item">
+                        <div className="value-label">Appearance</div>
+                        {AppearanceTypeOrder.reduce((acc, type) => {
+                            if (character.appearance[type]) {
+                                acc.push(
+                                    <div className="value-content">
+                                        {type}: {character.appearance[type]}
+                                    </div>
+                                );
+                            }
+                            return acc;
+                        }, [] as JSX.Element[])}
+                    </div>
+                    <div className="value-item">
+                        <div className="value-label">Bio</div>
+                        <div className="value-content">{character.bio}</div>
+                    </div>
                 </div>
             </div>
             <div className="character-list-item--image">

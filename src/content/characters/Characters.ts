@@ -25,7 +25,8 @@ export interface ICharacter {
     fullName: string;
     firstName: string;
     lastName: string;
-    appearance: string;
+    data: ICharacterData;
+    appearance: ICharacterAppearance;
     bio: string;
 }
 
@@ -34,4 +35,55 @@ export interface ICharacterListItem {
     name: string;
     path: string;
     avatar?: IImageProps;
+}
+
+export const CharacterDataTypes = {
+    Race: "Race",
+    Gender: "Gender",
+    Age: "Age",
+    Orientation: "Orientation",
+} as const;
+
+export const CharacterDataTypeOrder = [
+    CharacterDataTypes.Race,
+    CharacterDataTypes.Gender,
+    CharacterDataTypes.Age,
+    CharacterDataTypes.Orientation,
+];
+
+const CharacterDataTypesList = Object.values(CharacterDataTypes);
+
+export type TCharacterDataType = (typeof CharacterDataTypesList)[number];
+
+type MappedCharacterDataTypes = {
+    [key in TCharacterDataType]?: string;
+};
+
+export interface ICharacterData extends MappedCharacterDataTypes {}
+
+export const AppearanceTypes = {
+    Eyes: "Eyes",
+    Hair: "Hair",
+    Skin: "Skin",
+    Height: "Height",
+    Weight: "Weight",
+} as const;
+
+export const AppearanceTypeOrder = [
+    AppearanceTypes.Eyes,
+    AppearanceTypes.Hair,
+    AppearanceTypes.Skin,
+    AppearanceTypes.Height,
+    AppearanceTypes.Weight,
+];
+
+const AppearanceTypesList = Object.values(AppearanceTypes);
+
+export type TAppearanceType = (typeof AppearanceTypesList)[number];
+
+type MappedAppearanceTypes = {
+    [key in TAppearanceType]?: string;
+};
+export interface ICharacterAppearance extends MappedAppearanceTypes {
+    text: string;
 }
