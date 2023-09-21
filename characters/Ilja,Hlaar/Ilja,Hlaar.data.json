@@ -1,0 +1,27 @@
+{
+  "id": "iljaHlaar",
+  "path": "Ilja,Hlaar",
+  "name": "Ilja Hlaar",
+  "fullName": "Ilja Hlaar",
+  "firstName": [
+    "Ilja"
+  ],
+  "lastName": [
+    "Hlaar"
+  ],
+  "data": {
+    "race": "race",
+    "gender": "gender",
+    "age": "age",
+    "orientation": "orientation"
+  },
+  "appearance": {
+    "height": "height",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight",
+    "skin": "skin",
+    "hair": "hair"
+  },
+  "bio": "text"
+}

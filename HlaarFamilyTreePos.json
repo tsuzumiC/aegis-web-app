@@ -1,0 +1,324 @@
+{
+    "agnesHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "alaniBryneHlaar": {
+        "x": -4,
+        "y": 15,
+        "parentId": "marnieBryne"
+    },
+    "alisaHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "amberBryneHlaar": {
+        "x": 4,
+        "y": 30,
+        "parentId": "marnieBryne"
+    },
+    "angelaNovák": {
+        "x": -4,
+        "y": 15,
+        "parentId": "danielaNovák"
+    },
+    "annaApplewood": {
+        "x": 0,
+        "y": 0
+    },
+    "annieBryneHlaar": {
+        "x": 4,
+        "y": 15,
+        "parentId": "marnieBryne"
+    },
+    "audriaLogstead": {
+        "x": -50,
+        "y": 0
+    },
+    "ayendaSagedew": {
+        "x": -68,
+        "y": 0
+    },
+    "azmahFiresoul": {
+        "x": 0,
+        "y": 0
+    },
+    "benesaNovákFujimoriHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "celineArklightHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "choleBrooksBryneHlaar": {
+        "x": -2,
+        "y": 45,
+        "parentId": "isisBrooks"
+    },
+    "cicaHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "danielaNovák": {
+        "x": -86,
+        "y": 16
+    },
+    "diabellaNovákFujimoriJäähammasHlaar": {
+        "x": -12,
+        "y": 30,
+        "parentId": "danielaNovák"
+    },
+    "elalieSagedewHlaar": {
+        "x": 4,
+        "y": 15,
+        "parentId": "ayendaSagedew"
+    },
+    "emilyAkehurstHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "ericaArklight": {
+        "x": 0,
+        "y": 0
+    },
+    "esfirLarian": {
+        "x": 0,
+        "y": 0
+    },
+    "fanaaFiresoulHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "fylaeSagedewHlaar": {
+        "x": -4,
+        "y": 15,
+        "parentId": "ayendaSagedew"
+    },
+    "gawenCaer'lHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "ghan": {
+        "x": 0,
+        "y": 0
+    },
+    "gingerBryneHlaar": {
+        "x": -4,
+        "y": 30,
+        "parentId": "marnieBryne"
+    },
+    "gwainCaer'lHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "haruFujimoriJäähammasHlaar": {
+        "x": 2,
+        "y": 45,
+        "parentId": "seoriFujimori"
+    },
+    "hiraFujimoriHlaar": {
+        "x": -16,
+        "y": 30,
+        "parentId": "seoriFujimori"
+    },
+    "iljaHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "ingaLogsteadHlaar": {
+        "x": 0,
+        "y": 30,
+        "parentId": "audriaLogstead"
+    },
+    "isisBrooks": {
+        "x": -16,
+        "y": 0
+    },
+    "julieBryneHlaar": {
+        "x": -4,
+        "y": 45,
+        "parentId": "marnieBryne"
+    },
+    "katyBrooksHlaar": {
+        "x": 6,
+        "y": 15,
+        "parentId": "isisBrooks"
+    },
+    "kimiFujimoriJäähammasHlaar": {
+        "x": 10,
+        "y": 30,
+        "parentId": "seoriFujimori"
+    },
+    "laelCaer'l": {
+        "x": 0,
+        "y": 0
+    },
+    "leiwaHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "lilyBrooksBryneCaer'lHlaar": {
+        "x": -2,
+        "y": 60,
+        "parentId": "isisBrooks"
+    },
+    "linFujimoriJäähammasHlaar": {
+        "x": 10,
+        "y": 45,
+        "parentId": "seoriFujimori"
+    },
+    "lolaHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "maraNovákFujimoriJäähammasHlaar": {
+        "x": -4,
+        "y": 30,
+        "parentId": "danielaNovák"
+    },
+    "marnieBryne": {
+        "x": -32,
+        "y": 0
+    },
+    "meilaFujimoriHlaar": {
+        "x": -4,
+        "y": 15,
+        "parentId": "seoriFujimori"
+    },
+    "miikeenoJäähammas": {
+        "x": 19,
+        "y": 16,
+        "parentId": "seoriFujimori"
+    },
+    "mikaFujimoriHlaar": {
+        "x": -8,
+        "y": 30,
+        "parentId": "seoriFujimori"
+    },
+    "milenaNovákFujimoriJäähammasHlaar": {
+        "x": 4,
+        "y": 30,
+        "parentId": "danielaNovák"
+    },
+    "millieFujimoriJäähammasArklightHlaar": {
+        "x": 10,
+        "y": 60,
+        "parentId": "seoriFujimori"
+    },
+    "naamahHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "natalieNovák": {
+        "x": 4,
+        "y": 15,
+        "parentId": "danielaNovák"
+    },
+    "nish": {
+        "x": 0,
+        "y": 0
+    },
+    "nualaFujimoriHlaar": {
+        "x": 11,
+        "y": 15,
+        "parentId": "seoriFujimori"
+    },
+    "pavlaNovákFujimoriJäähammasHlaar": {
+        "x": 12,
+        "y": 30,
+        "parentId": "danielaNovák"
+    },
+    "phellinaLogsteadHlaar": {
+        "x": 4,
+        "y": 15,
+        "parentId": "audriaLogstead"
+    },
+    "rika": {
+        "x": 0,
+        "y": 0
+    },
+    "risaria": {
+        "x": 0,
+        "y": 0
+    },
+    "robinHemingway": {
+        "x": 0,
+        "y": 0
+    },
+    "rosieBryneHlaar": {
+        "x": 4,
+        "y": 45,
+        "parentId": "marnieBryne"
+    },
+    "sarahFujimoriJäähammasHlaar": {
+        "x": 19,
+        "y": 45,
+        "parentId": "seoriFujimori"
+    },
+    "sayaFujimoriJäähammasHlaar": {
+        "x": 19,
+        "y": 30,
+        "parentId": "seoriFujimori"
+    },
+    "scarletArklightHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "seoriFujimori": {
+        "x": -129,
+        "y": 0
+    },
+    "shadiLarianHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "shilliAkehurst": {
+        "x": 0,
+        "y": 0
+    },
+    "sulinaLogsteadHlaar": {
+        "x": -4,
+        "y": 15,
+        "parentId": "audriaLogstead"
+    },
+    "tarluk": {
+        "x": 0,
+        "y": 0
+    },
+    "trevanaArklight": {
+        "x": 0,
+        "y": 0
+    },
+    "valFiresoulHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "vorix": {
+        "x": 0,
+        "y": 0
+    },
+    "yuelaFujimoriHlaar": {
+        "x": -12,
+        "y": 15,
+        "parentId": "seoriFujimori"
+    },
+    "yumiFujimoriHlaar": {
+        "x": 2,
+        "y": 30,
+        "parentId": "seoriFujimori"
+    },
+    "zeenelHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "zildaHlaar": {
+        "x": 0,
+        "y": 0
+    },
+    "zumiHlaar": {
+        "x": -8,
+        "y": 60,
+        "parentId": "marnieBryne"
+    }
+}
