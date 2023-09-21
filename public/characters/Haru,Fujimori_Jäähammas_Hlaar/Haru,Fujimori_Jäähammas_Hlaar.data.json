@@ -1,7 +1,7 @@
 {
   "id": "haruFujimoriJäähammasHlaar",
   "path": "Haru,Fujimori_Jäähammas_Hlaar",
-  "name": "Haru Hlaar",
+  "name": "Haru Fujimori Hlaar",
   "fullName": "Haru Fujimori Jäähammas Hlaar",
   "firstName": [
     "Haru"
@@ -12,18 +12,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
+    "orientation": "orientation",
     "gender": "gender",
     "age": "age",
-    "orientation": "orientation"
+    "race": "race"
   },
   "appearance": {
-    "height": "height",
-    "text": "text",
-    "eyes": "eyes",
-    "weight": "weight",
     "skin": "skin",
-    "hair": "hair"
+    "text": "text",
+    "height": "height",
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }

@@ -34,6 +34,8 @@ function Merge-Objects {
     return $Object1
 }
 
+$alwaysIncludeNames = @("Fujimori", "Novák", "Sagedew","Logstead", "Bryne", "Hlaar")
+
 function UpdateOrCreateDataFile ($folder) {
     try {
         $pathName = $folder.Name
@@ -46,18 +48,28 @@ function UpdateOrCreateDataFile ($folder) {
         $firstNames = $splitName[0] -split ","
         $lastNames = $splitName[1] -split "_"
 
-        $lastIndex = $lastNames.Length - 1
-        $characterName = $firstNames[0] + " " + $lastNames[$lastIndex]
+        $characterName = $firstNames[0]
+
+        if($lastNames.Length -eq 1) {
+            $characterName += " " + $lastNames[0]
+        } else{
+            foreach ($name in $lastNames) {
+                if ($alwaysIncludeNames -contains $name) {
+                    $characterName += " " + $name
+                }
+            }
+        }
+        
 
         $dataFilePath = Join-Path -Path $folder.FullName -ChildPath "${pathName}.data.json"
 
         $dataFileContent = [PSCustomObject]@{
-            "id"         = $id
-            "path"       = $pathName
-            "name"       = $characterName
-            "fullName"   = $fullName
-            "firstName"  = $firstNames
-            "lastName"   = $lastNames
+            "id"         = "id"
+            "path"       = "pat"
+            "name"       = "name"
+            "fullName"   = "fullName"
+            "firstName"  = "firstName"
+            "lastName"   = "lastName"
             "data"       = @{
                 "race"        = "race"
                 "gender"      = "gender"
@@ -81,9 +93,15 @@ function UpdateOrCreateDataFile ($folder) {
             $existingData = Get-Content -Path $dataFilePath | ConvertFrom-Json
 
             $dataFileContent = Merge-Objects -Object1 $dataFileContent -Object2 $existingData
-
-
         }
+
+        # Set metadata
+        $dataFileContent.id = $id
+        $dataFileContent.path = $pathName
+        $dataFileContent.name = $characterName
+        $dataFileContent.fullName = $fullName
+        $dataFileContent.firstName = $firstNames
+        $dataFileContent.lastName = $lastNames
 
         # Convert the updated data back to JSON
         $dataFileContent = $dataFileContent | ConvertTo-Json -Depth 100 -EscapeHandling Default

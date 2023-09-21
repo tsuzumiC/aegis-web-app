@@ -40,7 +40,7 @@
         "y": 0
     },
     "azmahFiresoul": {
-        "x": 0,
+        "x": -169,
         "y": 0
     },
     "benesaNovákFujimoriHlaar": {
@@ -58,7 +58,8 @@
     },
     "cicaHlaar": {
         "x": 0,
-        "y": 0
+        "y": 15,
+        "parentId": "tarluk"
     },
     "danielaNovák": {
         "x": -86,
@@ -66,7 +67,7 @@
     },
     "diabellaNovákFujimoriJäähammasHlaar": {
         "x": -12,
-        "y": 30,
+        "y": 29,
         "parentId": "danielaNovák"
     },
     "elalieSagedewHlaar": {
@@ -76,19 +77,22 @@
     },
     "emilyAkehurstHlaar": {
         "x": 0,
-        "y": 0
+        "y": 15,
+        "parentId": "shilliAkehurst"
     },
     "ericaArklight": {
         "x": 0,
         "y": 0
     },
     "esfirLarian": {
-        "x": 0,
-        "y": 0
+        "x": -8,
+        "y": 31,
+        "parentId": "shilliAkehurst"
     },
     "fanaaFiresoulHlaar": {
-        "x": 0,
-        "y": 0
+        "x": 4,
+        "y": 15,
+        "parentId": "azmahFiresoul"
     },
     "fylaeSagedewHlaar": {
         "x": -4,
@@ -170,11 +174,12 @@
     },
     "lolaHlaar": {
         "x": 0,
-        "y": 0
+        "y": 15,
+        "parentId": "risaria"
     },
     "maraNovákFujimoriJäähammasHlaar": {
         "x": -4,
-        "y": 30,
+        "y": 29,
         "parentId": "danielaNovák"
     },
     "marnieBryne": {
@@ -198,7 +203,7 @@
     },
     "milenaNovákFujimoriJäähammasHlaar": {
         "x": 4,
-        "y": 30,
+        "y": 29,
         "parentId": "danielaNovák"
     },
     "millieFujimoriJäähammasArklightHlaar": {
@@ -226,7 +231,7 @@
     },
     "pavlaNovákFujimoriJäähammasHlaar": {
         "x": 12,
-        "y": 30,
+        "y": 29,
         "parentId": "danielaNovák"
     },
     "phellinaLogsteadHlaar": {
@@ -239,7 +244,7 @@
         "y": 0
     },
     "risaria": {
-        "x": 0,
+        "x": -193,
         "y": 0
     },
     "robinHemingway": {
@@ -269,12 +274,13 @@
         "x": -129,
         "y": 0
     },
-    "shadiLarianHlaar": {
-        "x": 0,
-        "y": 0
+    "shadiAkehurstLarianHlaar": {
+        "x": -4,
+        "y": 45,
+        "parentId": "shilliAkehurst"
     },
     "shilliAkehurst": {
-        "x": 0,
+        "x": -155,
         "y": 0
     },
     "sulinaLogsteadHlaar": {
@@ -283,7 +289,7 @@
         "parentId": "audriaLogstead"
     },
     "tarluk": {
-        "x": 0,
+        "x": -183,
         "y": 0
     },
     "trevanaArklight": {
@@ -291,8 +297,9 @@
         "y": 0
     },
     "valFiresoulHlaar": {
-        "x": 0,
-        "y": 0
+        "x": -4,
+        "y": 15,
+        "parentId": "azmahFiresoul"
     },
     "vorix": {
         "x": 0,

@@ -1,7 +1,7 @@
 {
   "id": "benesaNovákFujimoriHlaar",
   "path": "Benesa,Novák_Fujimori_Hlaar",
-  "name": "Benesa Hlaar",
+  "name": "Benesa Novák Fujimori Hlaar",
   "fullName": "Benesa Novák Fujimori Hlaar",
   "firstName": [
     "Benesa"
@@ -12,18 +12,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
+    "orientation": "orientation",
     "gender": "gender",
     "age": "age",
-    "orientation": "orientation"
+    "race": "race"
   },
   "appearance": {
-    "height": "height",
-    "text": "text",
-    "eyes": "eyes",
-    "weight": "weight",
     "skin": "skin",
-    "hair": "hair"
+    "text": "text",
+    "height": "height",
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }

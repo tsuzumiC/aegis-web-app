@@ -1,7 +1,7 @@
 {
   "id": "annieBryneHlaar",
   "path": "Annie,Bryne_Hlaar",
-  "name": "Annie Hlaar",
+  "name": "Annie Bryne Hlaar",
   "fullName": "Annie Bryne Hlaar",
   "firstName": [
     "Annie"
@@ -11,18 +11,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
+    "orientation": "orientation",
     "gender": "gender",
     "age": "age",
-    "orientation": "orientation"
+    "race": "race"
   },
   "appearance": {
-    "height": "height",
-    "text": "text",
-    "eyes": "eyes",
-    "weight": "weight",
     "skin": "skin",
-    "hair": "hair"
+    "text": "text",
+    "height": "height",
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }

@@ -1,7 +1,7 @@
 {
   "id": "phellinaLogsteadHlaar",
   "path": "Phellina,Logstead_Hlaar",
-  "name": "Phellina Hlaar",
+  "name": "Phellina Logstead Hlaar",
   "fullName": "Phellina Logstead Hlaar",
   "firstName": [
     "Phellina"
@@ -11,18 +11,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
+    "orientation": "orientation",
     "gender": "gender",
     "age": "age",
-    "orientation": "orientation"
+    "race": "race"
   },
   "appearance": {
-    "height": "height",
-    "text": "text",
-    "eyes": "eyes",
-    "weight": "weight",
     "skin": "skin",
-    "hair": "hair"
+    "text": "text",
+    "height": "height",
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }

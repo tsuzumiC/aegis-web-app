@@ -1,7 +1,7 @@
 {
   "id": "sarahFujimoriJäähammasHlaar",
   "path": "Sarah,Fujimori_Jäähammas_Hlaar",
-  "name": "Sarah Hlaar",
+  "name": "Sarah Fujimori Hlaar",
   "fullName": "Sarah Fujimori Jäähammas Hlaar",
   "firstName": [
     "Sarah"
@@ -12,18 +12,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
+    "orientation": "orientation",
     "gender": "gender",
     "age": "age",
-    "orientation": "orientation"
+    "race": "race"
   },
   "appearance": {
-    "height": "height",
-    "text": "text",
-    "eyes": "eyes",
-    "weight": "weight",
     "skin": "skin",
-    "hair": "hair"
+    "text": "text",
+    "height": "height",
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }
