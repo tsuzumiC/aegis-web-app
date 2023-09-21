@@ -12,7 +12,7 @@
   ],
   "data": {
     "orientation": "orientation",
-    "gender": "gender",
+    "gender": "Male_P",
     "age": "age",
     "race": "race"
   },
