@@ -10,19 +10,18 @@
     "Hlaar"
   ],
   "data": {
-    "age": "26 years, had this body for 7 months",
-    "gender": "Female (Vagina, Penis)",
-    "race": "Hlaar (Human, Slime, Krogan, strange animal / alien mix)",
-    "data": "",
-    "orientation": {}
+    "race": "race",
+    "gender": "gender",
+    "age": "age",
+    "orientation": "orientation"
   },
-  "appearance": "wip",
-  "bio": "wip",
-  "apperance": {
-    "apperance": "",
-    "text": {
-      "text": "Zumi stands 172 cm (5' 8\") tall from heel to the top of her head. Though she often looks a bit taller as she almost always wears rather high heels, or if bare foot, she tends to walk on the ball of her foot. She is slightly slender and doesn’t look like she would weigh much for her height but a scale would say 76 kg (167 lb). When less clothed you'd see she has a bit of muscles, as if she works out.\nShe has an overall female appearance but upon closer inspection she does have quite a few features that give her a more androgynous look, such as slightly wider shoulders, less of an hourglass shape, a bit sharper jaw bone and chin.\nShe has shoulder long strawberry blond hair that is a little uneven and ruffled but doesn't look unkempt.\nHer eyes are slightly bigger with hues of sky blue and rain cloud gray."
-    }
+  "appearance": {
+    "height": "height",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight",
+    "skin": "skin",
+    "hair": "hair"
   },
-  "orientation": "Yes"
+  "bio": "text"
 }

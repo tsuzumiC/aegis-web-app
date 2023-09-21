@@ -14,6 +14,7 @@ const AllCharactersPage: React.FC = () => {
     const [characterList, setCharacterList] = useState<
         ICharacterListItem[] | null
     >(null);
+
     const [filteredCharacterData, setFilteredCharacterData] = useState<
         ICharacter[]
     >([]);

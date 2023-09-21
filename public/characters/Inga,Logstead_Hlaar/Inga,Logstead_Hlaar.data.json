@@ -10,6 +10,19 @@
     "Logstead",
     "Hlaar"
   ],
-  "appearance": "Dark purple hair and large wisteria eyes.\nRather slender and not much apperant muscles. \"small\" breasts.",
-  "bio": "Aren't a big fan of most Hlaar's frivolous behaviors.\nIs a little ashamed to be born from a huge cocked horse. Sure her mother is a futa centaur, but still, she came out of a horse pussy... And her \"father\" is an almost equally sized horse cock wielder...\nNot to mention she inherited her sperm mother's cock... The only saving grace there is that it both of them have a genital slit that hides those abominations from view."
+  "data": {
+    "race": "race",
+    "gender": "gender",
+    "age": "age",
+    "orientation": "orientation"
+  },
+  "appearance": {
+    "height": "height",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight",
+    "skin": "skin",
+    "hair": "hair"
+  },
+  "bio": "text"
 }

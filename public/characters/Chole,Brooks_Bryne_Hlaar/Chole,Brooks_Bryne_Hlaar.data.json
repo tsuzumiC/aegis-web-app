@@ -1,0 +1,29 @@
+{
+  "id": "choleBrooksBryneHlaar",
+  "path": "Chole,Brooks_Bryne_Hlaar",
+  "name": "Chole Hlaar",
+  "fullName": "Chole Brooks Bryne Hlaar",
+  "firstName": [
+    "Chole"
+  ],
+  "lastName": [
+    "Brooks",
+    "Bryne",
+    "Hlaar"
+  ],
+  "data": {
+    "race": "race",
+    "gender": "gender",
+    "age": "age",
+    "orientation": "orientation"
+  },
+  "appearance": {
+    "height": "height",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight",
+    "skin": "skin",
+    "hair": "hair"
+  },
+  "bio": "text"
+}

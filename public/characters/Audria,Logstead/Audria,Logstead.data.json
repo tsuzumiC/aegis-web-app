@@ -1,0 +1,27 @@
+{
+  "id": "audriaLogstead",
+  "path": "Audria,Logstead",
+  "name": "Audria Logstead",
+  "fullName": "Audria Logstead",
+  "firstName": [
+    "Audria"
+  ],
+  "lastName": [
+    "Logstead"
+  ],
+  "data": {
+    "race": "race",
+    "gender": "gender",
+    "age": "age",
+    "orientation": "orientation"
+  },
+  "appearance": {
+    "height": "height",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight",
+    "skin": "skin",
+    "hair": "hair"
+  },
+  "bio": "text"
+}

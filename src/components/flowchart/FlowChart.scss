@@ -1,12 +1,15 @@
 @import "~style/vars";
 
-.family-tree {
+.flow-chart {
     display: flex;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
 
     &--content,
     &--wrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
     }
 
     .hideSvgSoThatItSupportsFirefox {

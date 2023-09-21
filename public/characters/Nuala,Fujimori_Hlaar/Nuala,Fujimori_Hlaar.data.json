@@ -10,6 +10,19 @@
     "Fujimori",
     "Hlaar"
   ],
-  "appearance": "wip",
-  "bio": "wip"
+  "data": {
+    "race": "race",
+    "gender": "gender",
+    "age": "age",
+    "orientation": "orientation"
+  },
+  "appearance": {
+    "height": "height",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight",
+    "skin": "skin",
+    "hair": "hair"
+  },
+  "bio": "text"
 }

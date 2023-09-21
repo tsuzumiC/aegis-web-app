@@ -34,7 +34,6 @@ export interface ICharacterListItem {
     id: string;
     name: string;
     path: string;
-    avatar?: IImageProps;
 }
 
 export const CharacterDataTypes = {

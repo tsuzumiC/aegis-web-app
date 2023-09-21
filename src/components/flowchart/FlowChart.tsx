@@ -1,6 +1,6 @@
-import "./FamilyTree.scss";
+import "./FlowChart.scss";
 
-import React, { PropsWithRef, useContext } from "react";
+import React, { PropsWithRef, useContext, useEffect, useMemo } from "react";
 
 import "reactflow/dist/style.css";
 
@@ -10,15 +10,19 @@ import {
     IShowModalPayload,
     ModalTypes,
 } from "components/modalManager/models/ModalMangerModels";
-import {
+
+import ReactFlow, {
     ConnectionLineType,
     Controls,
-    ReactFlow,
+    Node,
     ReactFlowProvider,
     Transform,
-} from "reactflow";
-import { Node } from "react-flow-renderer";
+} from "react-flow-renderer";
 import { FlowChartContext } from "./FlowChartContext";
+import { ICharacter, ICharacterListItem } from "content/characters/Characters";
+import axios from "axios";
+import { getLocalFilePath } from "components/utility/getLocalFile";
+import CharacterNode from "./components/CharacterNode";
 
 export interface IPosition {
     x: number;
@@ -113,18 +117,33 @@ const testPath: IPath = {
 
 const defaultTransform: Transform = [0, 0, 1];
 
-const elements: Node[] = [
+/* const elements: Node[] = [
     {
         id: "1",
         type: "input",
         data: { label: "Input Node" },
         position: { x: 250, y: 5 },
     },
-];
+]; */
 
-export interface IFlowchartProps {}
+enum ENodeTypes {
+    character = "character",
+}
 
-const FamilyTree = (props: PropsWithRef<IFlowchartProps>) => {
+type CustomNodeType = {
+    [key: string]: React.ComponentType<any>;
+};
+
+const nodeTypes: CustomNodeType = {
+    [ENodeTypes.character]: CharacterNode,
+};
+
+export interface IFlowchartProps {
+    elements?: Node[];
+}
+
+const FlowChart = (props: PropsWithRef<IFlowchartProps>) => {
+    const { elements } = props;
     const modalManagerContext = useContext(ModalManagerContext);
 
     const location = useLocation();
@@ -138,12 +157,18 @@ const FamilyTree = (props: PropsWithRef<IFlowchartProps>) => {
         modalManagerContext.onShowModal(payload);
     }; */
 
+    const handleWheel = (e: React.WheelEvent) => {
+        if (e.ctrlKey) {
+            e.stopPropagation();
+        }
+    };
+
     const removeContextValue = {
         onShowModal: () => {},
     };
 
     return (
-        <div className="family-tree">
+        <div className="flow-chart">
             <FlowChartContext.Provider value={removeContextValue}>
                 <ReactFlowProvider>
                     <svg className="hideSvgSoThatItSupportsFirefox">
@@ -151,29 +176,36 @@ const FamilyTree = (props: PropsWithRef<IFlowchartProps>) => {
                             <feGaussianBlur stdDeviation={1} />
                         </filter>
                     </svg>
+                    <div
+                        className="flow-chart--wrapper"
+                        onWheelCapture={handleWheel}
+                    >
+                        <ReactFlow
+                            nodes={elements}
+                            nodesDraggable={false}
+                            elementsSelectable={false}
+                            preventScrolling={false}
+                            zoomOnScroll={true}
+                            zoomOnDoubleClick={false}
+                            connectionLineType={ConnectionLineType.SmoothStep}
+                            nodeTypes={nodeTypes}
+                            selectionKeyCode={"0"}
+                            deleteKeyCode="Delete"
+                            multiSelectionKeyCode="Shift"
+                            zoomActivationKeyCode="Shift"
+                            minZoom={0}
+                            maxZoom={10}
+                        ></ReactFlow>
 
-                    <ReactFlow
-                        nodes={elements}
-                        nodesDraggable={false}
-                        nodesFocusable={false}
-                        elementsSelectable={false}
-                        preventScrolling={false}
-                        connectionLineType={ConnectionLineType.SmoothStep}
-                        deleteKeyCode="Delete"
-                        multiSelectionKeyCode="Shift"
-                        zoomActivationKeyCode="Shift"
-                        minZoom={0}
-                        maxZoom={10}
-                    ></ReactFlow>
-
-                    <Controls
-                        style={{ bottom: "15px", left: "10px", zIndex: 15 }}
-                        showInteractive={false}
-                    ></Controls>
+                        <Controls
+                            style={{ bottom: "15px", left: "10px", zIndex: 15 }}
+                            showInteractive={false}
+                        ></Controls>
+                    </div>
                 </ReactFlowProvider>
             </FlowChartContext.Provider>
         </div>
     );
 };
 
-export default FamilyTree;
+export default FlowChart;

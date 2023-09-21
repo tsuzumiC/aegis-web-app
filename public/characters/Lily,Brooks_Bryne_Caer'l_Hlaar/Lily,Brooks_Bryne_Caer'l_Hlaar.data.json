@@ -1,0 +1,30 @@
+{
+  "id": "lilyBrooksBryneCaer'lHlaar",
+  "path": "Lily,Brooks_Bryne_Caer'l_Hlaar",
+  "name": "Lily Hlaar",
+  "fullName": "Lily Brooks Bryne Caer'l Hlaar",
+  "firstName": [
+    "Lily"
+  ],
+  "lastName": [
+    "Brooks",
+    "Bryne",
+    "Caer'l",
+    "Hlaar"
+  ],
+  "data": {
+    "race": "race",
+    "gender": "gender",
+    "age": "age",
+    "orientation": "orientation"
+  },
+  "appearance": {
+    "height": "height",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight",
+    "skin": "skin",
+    "hair": "hair"
+  },
+  "bio": "text"
+}
