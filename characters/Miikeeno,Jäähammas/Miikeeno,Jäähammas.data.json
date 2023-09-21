@@ -11,7 +11,7 @@
   ],
   "data": {
     "orientation": "orientation",
-    "gender": "gender",
+    "gender": "Male_VP",
     "age": "age",
     "race": "race"
   },
