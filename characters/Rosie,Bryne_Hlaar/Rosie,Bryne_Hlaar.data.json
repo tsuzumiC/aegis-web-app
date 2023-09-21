@@ -1,7 +1,7 @@
 {
   "id": "rosieBryneHlaar",
   "path": "Rosie,Bryne_Hlaar",
-  "name": "Rosie Hlaar",
+  "name": "Rosie Bryne Hlaar",
   "fullName": "Rosie Bryne Hlaar",
   "firstName": [
     "Rosie"
@@ -11,18 +11,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
+    "orientation": "orientation",
     "gender": "gender",
     "age": "age",
-    "orientation": "orientation"
+    "race": "race"
   },
   "appearance": {
-    "height": "height",
-    "text": "text",
-    "eyes": "eyes",
-    "weight": "weight",
     "skin": "skin",
-    "hair": "hair"
+    "text": "text",
+    "height": "height",
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }

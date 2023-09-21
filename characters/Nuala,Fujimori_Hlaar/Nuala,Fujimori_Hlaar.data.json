@@ -1,7 +1,7 @@
 {
   "id": "nualaFujimoriHlaar",
   "path": "Nuala,Fujimori_Hlaar",
-  "name": "Nuala Hlaar",
+  "name": "Nuala Fujimori Hlaar",
   "fullName": "Nuala Fujimori Hlaar",
   "firstName": [
     "Nuala"
@@ -11,18 +11,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
+    "orientation": "orientation",
     "gender": "gender",
     "age": "age",
-    "orientation": "orientation"
+    "race": "race"
   },
   "appearance": {
-    "height": "height",
-    "text": "text",
-    "eyes": "eyes",
-    "weight": "weight",
     "skin": "skin",
-    "hair": "hair"
+    "text": "text",
+    "height": "height",
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }

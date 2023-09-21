@@ -12,18 +12,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
-    "gender": "gender",
     "orientation": "orientation",
-    "age": "age"
+    "gender": "gender",
+    "age": "age",
+    "race": "race"
   },
   "appearance": {
     "skin": "skin",
     "text": "text",
-    "hair": "hair",
-    "eyes": "eyes",
     "height": "height",
-    "weight": "weight"
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }

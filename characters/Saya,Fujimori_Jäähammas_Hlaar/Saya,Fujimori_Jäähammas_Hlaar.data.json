@@ -1,7 +1,7 @@
 {
   "id": "sayaFujimoriJäähammasHlaar",
   "path": "Saya,Fujimori_Jäähammas_Hlaar",
-  "name": "Saya Hlaar",
+  "name": "Saya Fujimori Hlaar",
   "fullName": "Saya Fujimori Jäähammas Hlaar",
   "firstName": [
     "Saya"
@@ -12,18 +12,18 @@
     "Hlaar"
   ],
   "data": {
-    "race": "race",
+    "orientation": "orientation",
     "gender": "gender",
     "age": "age",
-    "orientation": "orientation"
+    "race": "race"
   },
   "appearance": {
-    "height": "height",
-    "text": "text",
-    "eyes": "eyes",
-    "weight": "weight",
     "skin": "skin",
-    "hair": "hair"
+    "text": "text",
+    "height": "height",
+    "hair": "hair",
+    "weight": "weight",
+    "eyes": "eyes"
   },
   "bio": "text"
 }
