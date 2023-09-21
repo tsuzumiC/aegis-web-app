@@ -1,0 +1,29 @@
+{
+  "id": "shadiAkehurstLarianHlaar",
+  "path": "Shadi,Akehurst_Larian_Hlaar",
+  "name": "Shadi Hlaar",
+  "fullName": "Shadi Akehurst Larian Hlaar",
+  "firstName": [
+    "Shadi"
+  ],
+  "lastName": [
+    "Akehurst",
+    "Larian",
+    "Hlaar"
+  ],
+  "data": {
+    "race": "race",
+    "gender": "gender",
+    "orientation": "orientation",
+    "age": "age"
+  },
+  "appearance": {
+    "skin": "skin",
+    "text": "text",
+    "hair": "hair",
+    "eyes": "eyes",
+    "height": "height",
+    "weight": "weight"
+  },
+  "bio": "text"
+}
