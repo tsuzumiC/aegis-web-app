@@ -60,6 +60,11 @@
     "path": "Celine,Arklight_Hlaar"
   },
   {
+    "id": "charmeine",
+    "name": "Charmeine",
+    "path": "Charmeine"
+  },
+  {
     "id": "choleBrooksBryneHlaar",
     "name": "Chole Brooks Bryne Hlaar",
     "path": "Chole,Brooks_Bryne_Hlaar"
@@ -83,6 +88,11 @@
     "id": "elalieSagedewHlaar",
     "name": "Elalie Sagedew Hlaar",
     "path": "Elalie,Sagedew_Hlaar"
+  },
+  {
+    "id": "eliseFarrow",
+    "name": "Elise Farrow",
+    "path": "Elise,Farrow"
   },
   {
     "id": "emilyAkehurstHlaar",
@@ -278,6 +288,11 @@
     "id": "rosieBryneHlaar",
     "name": "Rosie Bryne Hlaar",
     "path": "Rosie,Bryne_Hlaar"
+  },
+  {
+    "id": "saraSaraqaelHlaar",
+    "name": "Sara Saraqael Hlaar",
+    "path": "Sara,Saraqael,Hlaar"
   },
   {
     "id": "sarahFujimoriJäähammasHlaar",
