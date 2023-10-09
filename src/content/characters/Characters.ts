@@ -22,6 +22,8 @@ export interface ICharacter {
     id: string;
     path: string;
     name: string;
+    player: string;
+    guestPlayer?: string;
     fullName: string;
     firstName: string;
     lastName: string;

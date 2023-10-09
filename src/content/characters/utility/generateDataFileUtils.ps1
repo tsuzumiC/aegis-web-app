@@ -34,7 +34,7 @@ function Merge-Objects {
     return $Object1
 }
 
-$alwaysIncludeNames = @("Fujimori", "Novák", "Sagedew","Logstead", "Bryne", "Hlaar")
+$alwaysIncludeNames = @("Fujimori", "Novák", "Sagedew", "Logstead", "Bryne", "Eriksdotter", "Hlaar")
 
 function UpdateOrCreateDataFile ($folder) {
     try {
@@ -50,9 +50,10 @@ function UpdateOrCreateDataFile ($folder) {
 
         $characterName = $firstNames[0]
 
-        if($lastNames.Length -eq 1) {
+        if ($lastNames.Length -eq 1) {
             $characterName += " " + $lastNames[0]
-        } else{
+        }
+        else {
             foreach ($name in $lastNames) {
                 if ($alwaysIncludeNames -contains $name) {
                     $characterName += " " + $name
@@ -65,8 +66,9 @@ function UpdateOrCreateDataFile ($folder) {
 
         $dataFileContent = [PSCustomObject]@{
             "id"         = "id"
-            "path"       = "pat"
+            "path"       = "path"
             "name"       = "name"
+            "player"     = "tsuzumi"
             "fullName"   = "fullName"
             "firstName"  = "firstName"
             "lastName"   = "lastName"

@@ -2,6 +2,7 @@
   "id": "emilyAkehurstHlaar",
   "path": "Emily,Akehurst_Hlaar",
   "name": "Emily Hlaar",
+  "player": "tsuzumi",
   "fullName": "Emily Akehurst Hlaar",
   "firstName": [
     "Emily"
@@ -24,5 +25,6 @@
     "weight": "weight",
     "eyes": "eyes"
   },
-  "bio": "text"
+  "bio": "text",
+  "guestPlayer": "Isis"
 }

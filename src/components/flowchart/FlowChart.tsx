@@ -12,12 +12,14 @@ import {
 } from "components/modalManager/models/ModalMangerModels";
 
 import ReactFlow, {
+    Background,
+    BackgroundVariant,
     ConnectionLineType,
     Controls,
     Node,
     ReactFlowProvider,
     Transform,
-} from "react-flow-renderer";
+} from "reactflow";
 import { FlowChartContext } from "./FlowChartContext";
 import { ICharacter, ICharacterListItem } from "content/characters/Characters";
 import axios from "axios";
@@ -171,11 +173,6 @@ const FlowChart = (props: PropsWithRef<IFlowchartProps>) => {
         <div className="flow-chart">
             <FlowChartContext.Provider value={removeContextValue}>
                 <ReactFlowProvider>
-                    <svg className="hideSvgSoThatItSupportsFirefox">
-                        <filter id="dot-blur">
-                            <feGaussianBlur stdDeviation={1} />
-                        </filter>
-                    </svg>
                     <div
                         className="flow-chart--wrapper"
                         onWheelCapture={handleWheel}
@@ -184,18 +181,26 @@ const FlowChart = (props: PropsWithRef<IFlowchartProps>) => {
                             nodes={elements}
                             nodesDraggable={false}
                             elementsSelectable={false}
-                            preventScrolling={false}
-                            zoomOnScroll={true}
-                            zoomOnDoubleClick={false}
                             connectionLineType={ConnectionLineType.SmoothStep}
                             nodeTypes={nodeTypes}
-                            selectionKeyCode={"0"}
-                            deleteKeyCode="Delete"
-                            multiSelectionKeyCode="Shift"
-                            zoomActivationKeyCode="Shift"
                             minZoom={0}
                             maxZoom={10}
-                        ></ReactFlow>
+                        >
+                            <Background
+                                id="background-lines1"
+                                color="#00000030"
+                                variant={BackgroundVariant.Lines}
+                                gap={300}
+                                offset={2}
+                            />
+                            <Background
+                                id="background-lines2"
+                                color="#00000020"
+                                variant={BackgroundVariant.Lines}
+                                gap={50}
+                                offset={2}
+                            />
+                        </ReactFlow>
 
                         <Controls
                             style={{ bottom: "15px", left: "10px", zIndex: 15 }}

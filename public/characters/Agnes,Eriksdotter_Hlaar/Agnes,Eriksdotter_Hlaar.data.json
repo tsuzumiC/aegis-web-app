@@ -1,12 +1,14 @@
 {
-  "id": "agnesHlaar",
-  "path": "Agnes,Hlaar",
-  "name": "Agnes Hlaar",
-  "fullName": "Agnes Hlaar",
+  "id": "agnesEriksdotterHlaar",
+  "path": "Agnes,Eriksdotter_Hlaar",
+  "name": "Agnes Eriksdotter Hlaar",
+  "player": "tsuzumi",
+  "fullName": "Agnes Eriksdotter Hlaar",
   "firstName": [
     "Agnes"
   ],
   "lastName": [
+    "Eriksdotter",
     "Hlaar"
   ],
   "data": {

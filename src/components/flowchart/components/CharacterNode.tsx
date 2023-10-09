@@ -28,7 +28,13 @@ const CharacterNode: React.FC<CharacterNodeProps> = (props) => {
         ref: getCharacterImagePath(data.path, "treeAvatar"),
         alt: data.name,
     };
-    console.log(data.data);
+
+    const handleImageError = (
+        event: React.SyntheticEvent<HTMLImageElement>
+    ) => {
+        event.currentTarget.src =
+            getLocalFilePath("/images/noCharacterRef.jpg") ?? "";
+    };
 
     return (
         <div className="character-node">
@@ -36,6 +42,7 @@ const CharacterNode: React.FC<CharacterNodeProps> = (props) => {
                 className="character-node--image"
                 src={getLocalFilePath(_image?.ref)}
                 alt={_image.alt}
+                onError={handleImageError}
             />
             <div
                 className="character-node--name"

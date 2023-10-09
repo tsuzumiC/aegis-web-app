@@ -1,0 +1,29 @@
+{
+  "id": "inezAkehurstHlaar",
+  "path": "Inez,Akehurst_Hlaar",
+  "name": "Inez Hlaar",
+  "player": "tsuzumi",
+  "fullName": "Inez Akehurst Hlaar",
+  "firstName": [
+    "Inez"
+  ],
+  "lastName": [
+    "Akehurst",
+    "Hlaar"
+  ],
+  "data": {
+    "age": "age",
+    "race": "race",
+    "orientation": "orientation",
+    "gender": "gender"
+  },
+  "appearance": {
+    "hair": "hair",
+    "height": "height",
+    "skin": "skin",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight"
+  },
+  "bio": "text"
+}

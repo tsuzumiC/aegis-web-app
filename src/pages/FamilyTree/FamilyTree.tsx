@@ -3,27 +3,25 @@ import "./FamilyTree.scss";
 
 import FlowChart from "components/flowchart/FlowChart";
 import axios from "axios";
-import { Node, XYPosition } from "react-flow-renderer";
+
 import { useEffect, useMemo, useState } from "react";
 import { ICharacter, ICharacterListItem } from "content/characters/Characters";
 import { ICharacterNodeProps } from "components/flowchart/components/CharacterNode";
 import { multiplyPosition } from "components/flowchart/utility/NodeUtility";
 import { ITableSet } from "models/ITableSet";
-
-interface INodePosition {
-    x: number;
-    y: number;
-    parentId?: string;
-}
+import {
+    ICharacterPositions,
+    INodePosition,
+    computeAbsolutePositions,
+} from "./utility/CharacterPosition";
+import { Node } from "reactflow";
 
 const FamilyTree = () => {
     const [characterList, setCharacterList] = useState<ICharacterListItem[]>(
         []
     );
 
-    const [positionList, setPositionList] = useState<
-        Record<string, INodePosition>
-    >({});
+    const [positionList, setPositionList] = useState<ICharacterPositions>({});
 
     const [characterData, setCharacterData] = useState<ITableSet<ICharacter>>({
         ids: [],
@@ -50,7 +48,9 @@ const FamilyTree = () => {
                 getLocalFilePath(`/HlaarFamilyTreePos.json`) ?? ""
             );
             if (response.data) {
-                setPositionList(response.data);
+                const result = computeAbsolutePositions(response.data);
+
+                setPositionList(result);
             }
         } catch (error) {
             // Handle the error
@@ -104,19 +104,11 @@ const FamilyTree = () => {
                     positionList[character.id] &&
                     characterData.values[character.id]
                 ) {
-                    const parentId = positionList[character.id].parentId;
-                    const parentPosition = parentId
-                        ? positionList[parentId]
-                        : { x: 0, y: 0 };
-                    const position = {
-                        x: positionList[character.id].x + parentPosition.x,
-                        y: positionList[character.id].y + parentPosition.y,
-                    };
                     acc.push({
                         id: character.id,
                         type: "character",
                         data: characterData.values[character.id],
-                        position: multiplyPosition(position),
+                        position: multiplyPosition(positionList[character.id]),
                     });
                 }
                 return acc;
@@ -135,52 +127,3 @@ const FamilyTree = () => {
 };
 
 export default FamilyTree;
-
-/* 
-
-    const [filteredCharacterData, setFilteredCharacterData] = React.useState<
-        ICharacter[]
-    >([]);
-    const fetchCharacterData = async (characters: ICharacterListItem[]) => {
-        try {
-            const characterDataPromises = characters.map(async (character) => {
-                const response = await axios.get(
-                    getLocalFilePath(
-                        `/characters/${character.path}/${character.path}.data.json`
-                    ) ?? ""
-                );
-                return response.data as ICharacter;
-            });
-
-            const data = await Promise.all(characterDataPromises);
-            setFilteredCharacterData(data);
-        } catch (error) {
-            // Handle the error
-        }
-    };
-
-    useEffect(() => {
-        fetchCharacterData([
-            {
-                id: "agnesHlaar",
-                name: "Agnes Hlaar",
-                path: "Agnes,Hlaar",
-            },
-        ]);
-    }, []);
-
-    const elements: Node[] = useMemo(() => {
-        if (filteredCharacterData.length > 0) {
-            return filteredCharacterData.map((character) => {
-                return {
-                    id: character.id,
-                    type: ENodeTypes.character,
-                    data: { character },
-                    position: { x: 250, y: 5 },
-                };
-            });
-        }
-
-        return [];
-    }, [filteredCharacterData]);
-*/
