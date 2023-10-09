@@ -1,0 +1,29 @@
+{
+  "id": "eneidaAkehurstHlaar",
+  "path": "Eneida,Akehurst_Hlaar",
+  "name": "Eneida Hlaar",
+  "player": "tsuzumi",
+  "fullName": "Eneida Akehurst Hlaar",
+  "firstName": [
+    "Eneida"
+  ],
+  "lastName": [
+    "Akehurst",
+    "Hlaar"
+  ],
+  "data": {
+    "age": "age",
+    "race": "race",
+    "orientation": "orientation",
+    "gender": "gender"
+  },
+  "appearance": {
+    "hair": "hair",
+    "height": "height",
+    "skin": "skin",
+    "text": "text",
+    "eyes": "eyes",
+    "weight": "weight"
+  },
+  "bio": "text"
+}

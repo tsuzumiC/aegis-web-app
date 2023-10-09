@@ -1,8 +1,8 @@
 [
   {
-    "id": "agnesHlaar",
-    "name": "Agnes Hlaar",
-    "path": "Agnes,Hlaar"
+    "id": "agnesEriksdotterHlaar",
+    "name": "Agnes Eriksdotter Hlaar",
+    "path": "Agnes,Eriksdotter_Hlaar"
   },
   {
     "id": "alaniBryneHlaar",
@@ -60,6 +60,11 @@
     "path": "Celine,Arklight_Hlaar"
   },
   {
+    "id": "charmeine",
+    "name": "Charmeine",
+    "path": "Charmeine"
+  },
+  {
     "id": "choleBrooksBryneHlaar",
     "name": "Chole Brooks Bryne Hlaar",
     "path": "Chole,Brooks_Bryne_Hlaar"
@@ -85,9 +90,19 @@
     "path": "Elalie,Sagedew_Hlaar"
   },
   {
+    "id": "eliseFarrow",
+    "name": "Elise Farrow",
+    "path": "Elise,Farrow"
+  },
+  {
     "id": "emilyAkehurstHlaar",
     "name": "Emily Akehurst Hlaar",
     "path": "Emily,Akehurst_Hlaar"
+  },
+  {
+    "id": "eneidaAkehurstHlaar",
+    "name": "Eneida Akehurst Hlaar",
+    "path": "Eneida,Akehurst_Hlaar"
   },
   {
     "id": "ericaArklight",
@@ -140,9 +155,14 @@
     "path": "Hira,Fujimori_Hlaar"
   },
   {
-    "id": "iljaHlaar",
-    "name": "Ilja Hlaar",
-    "path": "Ilja,Hlaar"
+    "id": "iljaEriksdotterHlaar",
+    "name": "Ilja Eriksdotter Hlaar",
+    "path": "Ilja,Eriksdotter_Hlaar"
+  },
+  {
+    "id": "inezAkehurstHlaar",
+    "name": "Inez Akehurst Hlaar",
+    "path": "Inez,Akehurst_Hlaar"
   },
   {
     "id": "ingaLogsteadHlaar",
@@ -280,6 +300,11 @@
     "path": "Rosie,Bryne_Hlaar"
   },
   {
+    "id": "saraSaraqaelHlaar",
+    "name": "Sara Saraqael Hlaar",
+    "path": "Sara,Saraqael,Hlaar"
+  },
+  {
     "id": "sarahFujimoriJäähammasHlaar",
     "name": "Sarah Fujimori Jäähammas Hlaar",
     "path": "Sarah,Fujimori_Jäähammas_Hlaar"
@@ -333,6 +358,11 @@
     "id": "vorix",
     "name": "Vorix",
     "path": "Vorix"
+  },
+  {
+    "id": "wilmaEriksdotter",
+    "name": "Wilma Eriksdotter",
+    "path": "Wilma,Eriksdotter"
   },
   {
     "id": "yuelaFujimoriHlaar",

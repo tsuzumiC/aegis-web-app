@@ -2,6 +2,7 @@
   "id": "audriaLogstead",
   "path": "Audria,Logstead",
   "name": "Audria Logstead",
+  "player": "tsuzumi",
   "fullName": "Audria Logstead",
   "firstName": [
     "Audria"
@@ -23,5 +24,6 @@
     "weight": "weight",
     "eyes": "eyes"
   },
-  "bio": "text"
+  "bio": "text",
+  "guestPlayer": "Dian"
 }

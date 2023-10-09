@@ -1,0 +1,28 @@
+{
+  "id": "eliseFarrow",
+  "path": "Elise,Farrow",
+  "name": "Elise Farrow",
+  "player": "Mysty",
+  "fullName": "Elise Farrow",
+  "firstName": [
+    "Elise"
+  ],
+  "lastName": [
+    "Farrow"
+  ],
+  "data": {
+    "orientation": "orientation",
+    "race": "race",
+    "gender": "gender",
+    "age": "age"
+  },
+  "appearance": {
+    "hair": "hair",
+    "eyes": "eyes",
+    "skin": "skin",
+    "weight": "weight",
+    "text": "text",
+    "height": "height"
+  },
+  "bio": "text"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "charmeine",
+  "path": "Charmeine",
+  "name": "Charmeine ",
+  "player": "skolopendra",
+  "fullName": "Charmeine",
+  "firstName": [
+    "Charmeine"
+  ],
+  "lastName": [
+    ""
+  ],
+  "data": {
+    "orientation": "orientation",
+    "race": "race",
+    "gender": "gender",
+    "age": "age"
+  },
+  "appearance": {
+    "hair": "hair",
+    "eyes": "eyes",
+    "skin": "skin",
+    "weight": "weight",
+    "text": "text",
+    "height": "height"
+  },
+  "bio": "text"
+}

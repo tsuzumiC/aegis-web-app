@@ -1,12 +1,14 @@
 {
-  "id": "iljaHlaar",
-  "path": "Ilja,Hlaar",
-  "name": "Ilja Hlaar",
-  "fullName": "Ilja Hlaar",
+  "id": "iljaEriksdotterHlaar",
+  "path": "Ilja,Eriksdotter_Hlaar",
+  "name": "Ilja Eriksdotter Hlaar",
+  "player": "tsuzumi",
+  "fullName": "Ilja Eriksdotter Hlaar",
   "firstName": [
     "Ilja"
   ],
   "lastName": [
+    "Eriksdotter",
     "Hlaar"
   ],
   "data": {
