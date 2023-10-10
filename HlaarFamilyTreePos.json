@@ -118,7 +118,7 @@
     },
     "ghan": {
         "x": 10,
-        "y": 0,
+        "y": 2,
         "parentId": "zeenelHlaar"
     },
     "gingerBryneHlaar": {
@@ -158,7 +158,7 @@
     },
     "isisBrooks": {
         "x": -14,
-        "y": 0,
+        "y": 2,
         "parentId": "zeenelHlaar"
     },
     "julieBryneHlaar": {
@@ -350,7 +350,7 @@
     },
     "zeenelHlaar": {
         "x": 0,
-        "y": 0
+        "y": -2
     },
     "zildaHlaar": {
         "x": -5,
