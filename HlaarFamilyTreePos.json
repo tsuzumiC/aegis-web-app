@@ -87,6 +87,11 @@
         "y": 15,
         "parentId": "shilliAkehurst"
     },
+    "eneidaAkehurstHlaar": {
+        "x": 4,
+        "y": 15,
+        "parentId": "inezAkehurstHlaar"
+    },
     "ericaArklight": {
         "x": 0,
         "y": 0
@@ -140,6 +145,11 @@
         "x": 4,
         "y": 15,
         "parentId": "wilmaEriksdotter"
+    },
+    "inezAkehurstHlaar": {
+        "x": 0,
+        "y": 15,
+        "parentId": "emilyAkehurstHlaar"
     },
     "ingaLogsteadHlaar": {
         "x": 4,
