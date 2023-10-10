@@ -9,10 +9,6 @@
         "y": 15,
         "parentId": "marnieBryne"
     },
-    "alisaHlaar": {
-        "x": 0,
-        "y": 0
-    },
     "amberBryneHlaar": {
         "x": 8,
         "y": 15,
@@ -53,10 +49,6 @@
         "y": 15,
         "parentId": "nualaFujimoriHlaar"
     },
-    "celineArklightHlaar": {
-        "x": 0,
-        "y": 0
-    },
     "choleBrooksBryneHlaar": {
         "x": -2,
         "y": 45,
@@ -91,10 +83,6 @@
         "x": 4,
         "y": 15,
         "parentId": "inezAkehurstHlaar"
-    },
-    "ericaArklight": {
-        "x": 0,
-        "y": 0
     },
     "esfirLarian": {
         "x": -8,
@@ -180,10 +168,6 @@
         "x": 16,
         "y": 0,
         "parentId": "rika"
-    },
-    "leiwaHlaar": {
-        "x": 0,
-        "y": 0
     },
     "lilyBrooksBryneCaer'lHlaar": {
         "x": 0,
@@ -290,10 +274,6 @@
         "y": 30,
         "parentId": "seoriFujimori"
     },
-    "scarletArklightHlaar": {
-        "x": 0,
-        "y": 0
-    },
     "seoriFujimori": {
         "x": -43,
         "y": -16,
@@ -318,10 +298,6 @@
         "x": -14,
         "y": 0,
         "parentId": "azmahFiresoul"
-    },
-    "trevanaArklight": {
-        "x": 0,
-        "y": 0
     },
     "valFiresoulHlaar": {
         "x": -4,
