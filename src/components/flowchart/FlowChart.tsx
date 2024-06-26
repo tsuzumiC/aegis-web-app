@@ -1,30 +1,30 @@
 import "./FlowChart.scss";
 
-import React, { PropsWithRef, useContext, useEffect, useMemo } from "react";
+import React, { PropsWithRef, useContext } from "react";
 
 import "reactflow/dist/style.css";
 
 import { ModalManagerContext } from "components/modalManager/ModalManager";
 import { useLocation } from "react-router-dom";
-import {
-    IShowModalPayload,
-    ModalTypes,
-} from "components/modalManager/models/ModalMangerModels";
 
 import ReactFlow, {
     Background,
     BackgroundVariant,
     ConnectionLineType,
     Controls,
+    Edge,
     Node,
     ReactFlowProvider,
     Transform,
+    Viewport,
 } from "reactflow";
 import { FlowChartContext } from "./FlowChartContext";
-import { ICharacter, ICharacterListItem } from "content/characters/Characters";
-import axios from "axios";
-import { getLocalFilePath } from "components/utility/getLocalFile";
+
 import CharacterNode from "./components/CharacterNode";
+import CharacterNodeSide from "./components/CharacterNodeSide";
+import CustomEdge from "./components/CustomEdge";
+import { CustomNode } from "./utility/NodeUtility";
+import TimelineEventNode from "./components/TimelineEventNode";
 
 export interface IPosition {
     x: number;
@@ -67,7 +67,7 @@ const edgeMaker = (path: IPath) => {
             const nextNode = path.nodes[index + 1];
 
             const radius = Math.min(
-                RADIUS,
+                node.radius ?? RADIUS,
                 distance(prevNode.position, node.position) / 2,
                 distance(node.position, nextNode.position) / 2
             );
@@ -130,6 +130,8 @@ const defaultTransform: Transform = [0, 0, 1];
 
 enum ENodeTypes {
     character = "character",
+    characterSide = "characterSide",
+    timelineEvent = "timelineEvent",
 }
 
 type CustomNodeType = {
@@ -138,19 +140,28 @@ type CustomNodeType = {
 
 const nodeTypes: CustomNodeType = {
     [ENodeTypes.character]: CharacterNode,
+    [ENodeTypes.characterSide]: CharacterNodeSide,
+    [ENodeTypes.timelineEvent]: TimelineEventNode,
 };
 
+const edgeTypes: CustomNodeType = {
+    customEdge: CustomEdge,
+};
+
+const defaultViewport: Viewport = { x: 500, y: 300, zoom: 0.5 };
+
 export interface IFlowchartProps {
-    elements?: Node[];
+    nodes?: CustomNode[];
+    edges?: Edge[];
 }
 
 const FlowChart = (props: PropsWithRef<IFlowchartProps>) => {
-    const { elements } = props;
-    const modalManagerContext = useContext(ModalManagerContext);
+    const { nodes, edges } = props;
+    /* const modalManagerContext = useContext(ModalManagerContext);
 
     const location = useLocation();
 
-    /*   const handleOnShowModal = (character: TCharacters) => {
+       const handleOnShowModal = (character: TCharacters) => {
         const payload: IShowModalPayload = {
             id: character,
             type: ModalTypes.character,
@@ -178,13 +189,16 @@ const FlowChart = (props: PropsWithRef<IFlowchartProps>) => {
                         onWheelCapture={handleWheel}
                     >
                         <ReactFlow
-                            nodes={elements}
+                            nodes={nodes as Node[]}
+                            edges={edges}
                             nodesDraggable={false}
                             elementsSelectable={false}
-                            connectionLineType={ConnectionLineType.SmoothStep}
+                            connectionLineType={ConnectionLineType.Step}
                             nodeTypes={nodeTypes}
+                            edgeTypes={edgeTypes}
                             minZoom={0}
                             maxZoom={10}
+                            defaultViewport={defaultViewport}
                         >
                             <Background
                                 id="background-lines1"

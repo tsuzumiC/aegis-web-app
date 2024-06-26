@@ -31,4 +31,43 @@
         font-weight: 600;
         text-align: center;
     }
+
+    &--handle {
+        position: absolute;
+
+        &.handle {
+            &-misc1 {
+                top: 0;
+                left: 16.66%;
+            }
+            &-mother {
+                top: 0;
+                left: 25%;
+            }
+            &-misc2 {
+                top: 0;
+                left: 33.33%;
+            }
+            &-center {
+                top: 0;
+                left: 50%;
+            }
+            &-misc3 {
+                top: 0;
+                left: 66.67%;
+            }
+            &-father {
+                top: 0;
+                left: 75%;
+            }
+            &-misc4 {
+                top: 0;
+                left: 83.34%;
+            }
+            &-out {
+                bottom: 0;
+                left: 50%;
+            }
+        }
+    }
 }

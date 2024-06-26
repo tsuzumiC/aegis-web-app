@@ -1,0 +1,59 @@
+.character-node-side {
+    position: relative;
+    align-items: center;
+
+    display: flex;
+
+    cursor: pointer;
+
+    &--image {
+        width: 150px;
+    }
+
+    &--name {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 270px;
+        height: 100px;
+
+        margin-left: -20px;
+
+        padding: 10px;
+
+        box-sizing: border-box;
+
+        background-color: white;
+
+        border: 2px solid black;
+        border-radius: 25px;
+
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &--handle {
+        position: absolute;
+
+        background-color: transparent;
+        border: none;
+
+        &.handle {
+            &-mother {
+                left: 25%;
+            }
+            &-center {
+                left: 50%;
+            }
+            &-father {
+                left: 75%;
+            }
+            &-right {
+                top: 50%;
+            }
+        }
+    }
+}

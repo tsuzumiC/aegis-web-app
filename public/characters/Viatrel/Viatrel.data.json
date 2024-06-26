@@ -1,0 +1,28 @@
+{
+  "id": "viatrel",
+  "path": "Viatrel",
+  "name": "Viatrel ",
+  "player": "tsuzumi",
+  "fullName": "Viatrel",
+  "firstName": [
+    "Viatrel"
+  ],
+  "lastName": [
+    ""
+  ],
+  "data": {
+    "race": "race",
+    "orientation": "orientation",
+    "gender": "gender",
+    "age": "age"
+  },
+  "appearance": {
+    "hair": "hair",
+    "eyes": "eyes",
+    "text": "text",
+    "skin": "skin",
+    "weight": "weight",
+    "height": "height"
+  },
+  "bio": "text"
+}

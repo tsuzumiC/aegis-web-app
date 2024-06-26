@@ -110,6 +110,30 @@ function UpdateOrCreateDataFile ($folder) {
 
         # Save the data to the data file
         $dataFileContent | Set-Content -Path $dataFilePath -Encoding UTF8
+        
+        # Assuming $pathName is the folder name and the image follows the pattern: FolderName.treeAvatar.jpg
+        $imageFileName = $folder.Name + ".treeAvatar.jpg"
+        $imageFilePath = Join-Path -Path $folder.FullName -ChildPath $imageFileName
+        $folderImageFilePath = Join-Path -Path $folder.FullName -ChildPath "folder.jpg"
+
+        # Check if the image file exists
+        if (Test-Path $imageFilePath) {
+            # Remove any existing folder.jpg to avoid conflicts
+            if (Test-Path $folderImageFilePath) {
+                Remove-Item $folderImageFilePath -Force
+            }
+
+            # Copy and rename the image file to folder.jpg
+            Copy-Item -Path $imageFilePath -Destination $folderImageFilePath
+
+            # Refresh the folder to show changes if needed
+            # $shell = New-Object -ComObject Shell.Application
+            # $folderItem = $shell.Namespace($folder.FullName)
+            # $folderItem.Self.InvokeVerb("Refresh")
+        }
+        else {
+            Write-Host "Image file $imageFileName not found in folder $pathName"
+        }
     }
     catch {
         Write-Host "An error occurred for folder ${folder}: $_"

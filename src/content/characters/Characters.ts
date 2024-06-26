@@ -38,10 +38,16 @@ export interface ICharacterListItem {
     path: string;
 }
 
+export interface IAge {
+    year: number;
+    month: number;
+}
+
 export const CharacterDataTypes = {
     Race: "race",
     Gender: "gender",
     Age: "age",
+    IntroAge: "introAge",
     Orientation: "orientation",
 } as const;
 
@@ -49,6 +55,7 @@ export const CharacterDataTypeOrder = [
     CharacterDataTypes.Race,
     CharacterDataTypes.Gender,
     CharacterDataTypes.Age,
+    CharacterDataTypes.IntroAge,
     CharacterDataTypes.Orientation,
 ];
 
@@ -56,12 +63,12 @@ const CharacterDataTypesList = Object.values(CharacterDataTypes);
 
 export type TCharacterDataType = (typeof CharacterDataTypesList)[number];
 
-type MappedCharacterDataTypes = {
-    [key in TCharacterDataType]?: string;
-};
-
-export interface ICharacterData extends MappedCharacterDataTypes {
+export interface ICharacterData {
+    [CharacterDataTypes.Race]?: string;
     [CharacterDataTypes.Gender]?: TGender;
+    [CharacterDataTypes.Age]?: number;
+    [CharacterDataTypes.IntroAge]?: IAge;
+    [CharacterDataTypes.Orientation]?: string;
 }
 
 export const AppearanceTypes = {

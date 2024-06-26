@@ -1,0 +1,28 @@
+{
+  "id": "eliasHlaar",
+  "path": "Elias,Hlaar",
+  "name": "Elias Hlaar",
+  "player": "tsuzumi",
+  "fullName": "Elias Hlaar",
+  "firstName": [
+    "Elias"
+  ],
+  "lastName": [
+    "Hlaar"
+  ],
+  "data": {
+    "race": "race",
+    "orientation": "orientation",
+    "gender": "gender",
+    "age": "age"
+  },
+  "appearance": {
+    "hair": "hair",
+    "eyes": "eyes",
+    "text": "text",
+    "skin": "skin",
+    "weight": "weight",
+    "height": "height"
+  },
+  "bio": "text"
+}

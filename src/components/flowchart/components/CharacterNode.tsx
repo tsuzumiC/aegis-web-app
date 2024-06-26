@@ -6,7 +6,7 @@ import {
 } from "components/utility/getLocalFile";
 import { ICharacter } from "content/characters/Characters";
 import { Gender } from "content/characters/Gender";
-import { Node } from "reactflow";
+import { CustomNode } from "../utility/NodeUtility";
 
 const CharacterColors = {
     [Gender.Female_V]: "#ff66aa",
@@ -19,7 +19,7 @@ const CharacterColors = {
 
 export interface ICharacterNodeProps extends ICharacter {}
 
-type CharacterNodeProps = Node<ICharacterNodeProps>;
+type CharacterNodeProps = CustomNode<ICharacterNodeProps>;
 
 const CharacterNode: React.FC<CharacterNodeProps> = (props) => {
     const { data } = props;
@@ -38,6 +38,34 @@ const CharacterNode: React.FC<CharacterNodeProps> = (props) => {
 
     return (
         <div className="character-node">
+            <div
+                id={`misc1-handle-${data.id}`}
+                className="character-node--handle handle-misc1"
+            />
+            <div
+                id={`mother-handle-${data.id}`}
+                className="character-node--handle handle-mother"
+            />
+            <div
+                id={`misc2-handle-${data.id}`}
+                className="character-node--handle handle-misc2"
+            />
+            <div
+                id={`center-handle-${data.id}`}
+                className="character-node--handle handle-center"
+            />
+            <div
+                id={`misc3-handle-${data.id}`}
+                className="character-node--handle handle-misc3"
+            />
+            <div
+                id={`father-handle-${data.id}`}
+                className="character-node--handle handle-father"
+            />
+            <div
+                id={`misc4-handle-${data.id}`}
+                className="character-node--handle handle-misc4"
+            />
             <img
                 className="character-node--image"
                 src={getLocalFilePath(_image?.ref)}
@@ -54,6 +82,10 @@ const CharacterNode: React.FC<CharacterNodeProps> = (props) => {
             >
                 {data.name}
             </div>
+            <div
+                id={`out-handle-${data.id}`}
+                className="character-node--handle handle-out"
+            />
         </div>
     );
 };

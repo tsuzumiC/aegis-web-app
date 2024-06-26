@@ -1,0 +1,73 @@
+.timeline-event-node {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+
+    &--container {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        line-height: 0;
+    }
+
+    &--age {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: 32px;
+        font-weight: 600;
+
+        line-height: 1.1;
+
+        &--current {
+            color: gray;
+        }
+
+        &.pos {
+            &-top {
+                bottom: 105%;
+            }
+            &-bottom {
+                top: 105%;
+            }
+        }
+    }
+
+    &--handle {
+        position: absolute;
+
+        background-color: transparent;
+        border: none;
+
+        &.handle {
+            &-top {
+                top: -2px;
+                left: 50%;
+            }
+            &-right {
+                top: 50%;
+                right: -2px;
+            }
+            &-bottom {
+                bottom: -2px;
+                left: 50%;
+            }
+            &-left {
+                top: 50%;
+                left: -2px;
+            }
+        }
+    }
+}
