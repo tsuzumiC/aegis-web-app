@@ -1,4 +1,4 @@
-$sourceDirectory = "G:\Dropbox\RP\Aegis\Characters\Hlaar Family"
+$sourceDirectory = "I:\Aegis\aegis-web-app\public\characters"
 
 $sourceFolders = Get-ChildItem -Path $sourceDirectory -Directory
 

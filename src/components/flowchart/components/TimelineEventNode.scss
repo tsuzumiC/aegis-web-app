@@ -53,20 +53,20 @@
 
         &.handle {
             &-top {
-                top: -2px;
+                top: 0px;
                 left: 50%;
             }
             &-right {
                 top: 50%;
-                right: -2px;
+                right: 0px;
             }
             &-bottom {
-                bottom: -2px;
+                bottom: 0px;
                 left: 50%;
             }
             &-left {
                 top: 50%;
-                left: -2px;
+                left: 0px;
             }
         }
     }

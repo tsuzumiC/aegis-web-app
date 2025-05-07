@@ -21,10 +21,10 @@ const TimelineEventNode: React.FC<TimelineEventNodeProps> = (props) => {
             {agePos && (
                 <div className={`timeline-event-node--age pos-${agePos}`}>
                     <div className="timeline-event-node--age--current">
-                        {data.currentAge?.year},{data.currentAge?.month}
+                        {data.currentAge},{data.currentAge}
                     </div>
                     <div className="timeline-event-node--age--offset">
-                        {data.offsetAge?.year},{data.offsetAge?.month}
+                        {data.offsetAge},{data.offsetAge}
                     </div>
                 </div>
             )}

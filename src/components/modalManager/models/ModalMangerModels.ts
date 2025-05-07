@@ -1,5 +1,3 @@
-import { TCharacters } from "content/characters/Characters";
-
 export const ModalTypes = {
     character: "character",
 } as const;
@@ -9,7 +7,7 @@ const ModalTypeList = Object.values(ModalTypes);
 export type TModalTypes = (typeof ModalTypeList)[number];
 
 export type TModalListTypes = {
-    [ModalTypes.character]: TCharacters;
+    [ModalTypes.character]: string;
 };
 
 export interface IModalOptions {

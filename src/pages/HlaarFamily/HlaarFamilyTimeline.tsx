@@ -1,37 +1,33 @@
 import "./HlaarFamilyTree.scss";
+
+import { useEffect, useMemo, useState } from "react";
+import axios from "axios";
+
 import { getLocalFilePath } from "components/utility/getLocalFile";
 
 import FlowChart from "components/flowchart/FlowChart";
-import axios from "axios";
 
-import { useEffect, useMemo, useState } from "react";
-import { ICharacter, ICharacterListItem } from "content/characters/Characters";
+import { ICharacter, ICharacterListItem } from "content/characters/Character";
+import { IEvent, IEvents } from "content/events/Event";
 
 import {
     CustomNode,
-    multiplyPosition,
+    XYPosition,
 } from "components/flowchart/utility/NodeUtility";
 import { ITableSet } from "models/ITableSet";
-import {
-    INodePositions,
-    computeAbsolutePositions,
-} from "./utility/NodePosition";
-import { Edge } from "reactflow";
-import {
-    ITimelineCharacterNode,
-    ITimelineCharacterNodes,
-} from "./utility/TimelineNodes";
+import { Edge, Node } from "reactflow";
+import { TimeDate } from "content/timeDate/TimeDate";
 
-const NODE_WIDTH = 8;
-const NODE_HEIGHT = 4;
+const NODE_WIDTH = 220;
+const NODE_HEIGHT = 270;
+
+const zeroDate = new TimeDate(300, 1, 1);
+
+const msInDay = 1000 * 60 * 60 * 24;
 
 const HlaarFamilyTimeline = () => {
     const [characterList, setCharacterList] = useState<ICharacterListItem[]>(
         []
-    );
-
-    const [positionList, setPositionList] = useState<ITimelineCharacterNodes>(
-        {}
     );
 
     const [characterData, setCharacterData] = useState<ITableSet<ICharacter>>({
@@ -53,38 +49,63 @@ const HlaarFamilyTimeline = () => {
         }
     };
 
-    const fetchPositionList = async () => {
-        try {
-            const response = await axios.get<
-                Record<string, ITimelineCharacterNode>
-            >(getLocalFilePath(`/HlaarFamilyTimelinePos.json`) ?? "");
-            if (response.data) {
-                const result = computeAbsolutePositions(response.data);
-
-                setPositionList(result);
-            }
-        } catch (error) {
-            // Handle the error
-        }
-    };
-
     const fetchCharacterData = async (characters: ICharacterListItem[]) => {
         try {
             const characterDataPromises = characters.map(async (character) => {
-                const response = await axios.get(
+                const dataPath =
                     getLocalFilePath(
                         `/characters/${character.path}/${character.path}.data.json`
-                    ) ?? ""
-                );
-                return response.data as ICharacter;
+                    ) ?? "";
+
+                const eventPath =
+                    getLocalFilePath(
+                        `/characters/${character.path}/${character.path}.events.json`
+                    ) ?? "";
+
+                const [dataResponse, eventResponse] = await Promise.all([
+                    axios.get<ICharacter>(dataPath),
+                    axios.get<IEvents>(eventPath),
+                ]);
+
+                const data = dataResponse.data;
+
+                data.birth = TimeDate.fromJSON(data.birth);
+
+                if (data.intro) {
+                    data.intro = TimeDate.fromJSON(data.intro);
+                }
+
+                const events = eventResponse.data;
+
+                if (events.ids.length > 0) {
+                    events.ids.forEach((eventId) => {
+                        const event = events.values[eventId];
+
+                        if (event.date) {
+                            event.date = TimeDate.fromJSON(event.date);
+                        }
+
+                        if (event.age) {
+                            event.age = TimeDate.fromJSON(event.age);
+                        }
+                    });
+                }
+
+                return {
+                    data,
+                    events,
+                };
             });
 
-            const data = await Promise.all(characterDataPromises);
+            const charactersInfo = await Promise.all(characterDataPromises);
 
-            const characterData = data.reduce(
-                (acc, character) => {
-                    acc.ids.push(character.id);
-                    acc.values[character.id] = character;
+            const characterData = charactersInfo.reduce(
+                (acc, info) => {
+                    acc.ids.push(info.data.id);
+                    acc.values[info.data.id] = {
+                        ...info.data,
+                        events: info.events,
+                    };
 
                     return acc;
                 },
@@ -98,7 +119,6 @@ const HlaarFamilyTimeline = () => {
     };
 
     useEffect(() => {
-        fetchPositionList();
         fetchCharacterList();
     }, []);
 
@@ -111,90 +131,61 @@ const HlaarFamilyTimeline = () => {
     const { nodes, edges } = useMemo(() => {
         if (characterList.length > 0) {
             return characterList.reduce(
-                ({ nodes, edges }, character) => {
-                    const position = positionList[character.id];
-                    const data = characterData.values[character.id];
-
-                    const tempNodes: CustomNode[] = [];
+                ({ nodes, edges }, item) => {
+                    const tempNodes: Node<ICharacter | IEvent>[] = [];
                     const tempEdges: Edge[] = [];
 
-                    if (position && data) {
+                    const character = characterData.values[item.id];
+
+                    if (character) {
+                        const firstDateTime = character.intro
+                            ? character.intro.add(character.birth)
+                            : character.birth;
+
+                        const xPos =
+                            firstDateTime.getDayDiff(zeroDate) - NODE_WIDTH;
+
+                        const yPos = character.yOrder * (NODE_HEIGHT + 50);
+
                         tempNodes.push({
-                            id: character.id,
-                            type: "characterSide",
-                            data,
-                            position: multiplyPosition(position),
+                            id: item.id,
+                            type: "character",
+                            data: character,
+                            width: NODE_WIDTH,
+                            height: NODE_HEIGHT,
+                            position: { x: xPos, y: yPos },
                         });
 
-                        const introAge = data.data.introAge ?? {
-                            year: 0,
-                            month: 0,
-                        };
+                        const events = character?.events;
 
-                        const external = position.external !== undefined;
-                        if (external) {
-                            tempNodes.push({
-                                id: character.id + "-external",
-                                type: "timelineEvent",
-                                data: {
-                                    type: "event",
-                                    currentAge: {
-                                        year: introAge.year,
+                        if (events && (events?.ids.length ?? 0) > 0) {
+                            for (var i = 0; i < events.ids.length; i++) {
+                                const eventId = events.ids[i];
+                                const event = events.values[eventId];
 
-                                        month: introAge.month,
-                                    },
-                                    offsetAge: {
-                                        year: 0,
-                                        month: 0,
-                                    },
-                                    agePos: position.external
-                                        ? "top"
-                                        : undefined,
-                                },
-                                position: multiplyPosition({
-                                    x: position.x + NODE_WIDTH + 0.5,
-                                    y:
-                                        (position.y ?? 0) +
-                                        NODE_HEIGHT / 2 -
-                                        0.5,
-                                }),
-                            });
-                        }
+                                const hasAge = event.age !== undefined;
+                                const hasDate = event.date !== undefined;
 
-                        if (position.timeNodes) {
-                            position.timeNodes.forEach((node, index) => {
+                                if (!hasAge && !hasDate) {
+                                    continue;
+                                }
+
+                                const eventDate = hasAge
+                                    ? character.birth.add(event.age!)
+                                    : event.date!;
+
+                                const xPos = eventDate.getDayDiff(zeroDate);
+
                                 tempNodes.push({
-                                    id: character.id + "-event-" + index,
+                                    id: eventId,
                                     type: "timelineEvent",
-                                    data: {
-                                        type: node.type,
-                                        currentAge: {
-                                            year:
-                                                introAge.year +
-                                                Math.floor(node.x / 12),
-                                            month:
-                                                introAge.month + (node.x % 12),
-                                        },
-                                        offsetAge: {
-                                            year: Math.floor(node.x / 12),
-                                            month: node.x % 12,
-                                        },
-                                        agePos: node.agePos,
+                                    data: event,
+                                    position: {
+                                        x: xPos,
+                                        y: yPos,
                                     },
-                                    position: multiplyPosition({
-                                        x:
-                                            position.x +
-                                            node.x +
-                                            NODE_WIDTH +
-                                            (external ? 0.5 : -0.5),
-                                        y:
-                                            (position.y ?? 0) +
-                                            (node.y ?? 0) +
-                                            NODE_HEIGHT / 2 -
-                                            0.5,
-                                    }),
                                 });
-                            });
+                            }
                         }
 
                         if (tempNodes.length > 1) {
@@ -209,12 +200,11 @@ const HlaarFamilyTimeline = () => {
                                     sourceHandle: "right-handle-" + node.id,
                                     target: nextNode.id,
                                     targetHandle: "left-handle-" + nextNode.id,
-                                    type: "step",
+                                    type: "timelineEdge",
                                     style: {
                                         strokeWidth: 16,
                                         stroke: "gray",
                                     },
-                                    data: {},
                                 });
                             }
                         }
@@ -236,7 +226,7 @@ const HlaarFamilyTimeline = () => {
             nodes: CustomNode[];
             edges: Edge[];
         };
-    }, [characterList, positionList, characterData]);
+    }, [characterList, characterData]);
 
     return (
         <div className="hlaar-family-tree">

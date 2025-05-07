@@ -6,7 +6,10 @@ import {
     IModalListItem,
     TModalListTypes,
 } from "components/modalManager/models/ModalMangerModels";
-import { getLocalFilePath } from "components/utility/getLocalFile";
+import {
+    getCharacterImagePath,
+    getLocalFilePath,
+} from "components/utility/getLocalFile";
 import { useGetCharacterById } from "content/characters/api/hooks";
 
 import { PropsWithRef, useContext } from "react";
@@ -48,8 +51,10 @@ const CharacterModal = <T extends keyof TModalListTypes>(
                 title={character.name}
                 mainImage={
                     <img
-                        src={getLocalFilePath(character.mainImage?.ref)}
-                        alt={character.mainImage?.alt}
+                        src={getLocalFilePath(
+                            getCharacterImagePath(character.path)
+                        )}
+                        alt={character.name}
                     />
                 }
             />

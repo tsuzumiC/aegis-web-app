@@ -1,8 +1,7 @@
 import { getLocalFilePath } from "components/utility/getLocalFile";
-import { ICharacter, ICharacterListItem } from "../Characters";
+import { ICharacter, ICharacterListItem } from "../Character";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { ITableSetWithOptions } from "models/ITableSet";
 
 export const useGetCharacters = (characterPaths: string[]) => {
     const fetchCharacterPromises = characterPaths.map(async (characterPath) => {

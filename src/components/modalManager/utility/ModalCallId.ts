@@ -1,4 +1,4 @@
-import { IShowModalPayload } from "../api/IModalManager";
+import { IShowModalPayload } from "../models/ModalMangerModels";
 
 export const makeCallId = (payload: IShowModalPayload) => {
     if (payload.customList) {

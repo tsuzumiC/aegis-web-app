@@ -1,4 +1,4 @@
-import { IModalOptions } from "../api/IModalManager";
+import { IModalOptions } from "../models/ModalMangerModels";
 
 export const ModalOptionsStringify = (options: IModalOptions) => {
     const result = Object.keys(options).map((x) => {

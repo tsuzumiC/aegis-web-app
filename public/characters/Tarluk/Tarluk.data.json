@@ -1,0 +1,31 @@
+{
+    "id": "tarluk",
+    "path": "Tarluk",
+    "name": "Tarluk ",
+    "player": "Dian",
+    "fullName": "Tarluk",
+    "firstName": ["Tarluk"],
+    "lastName": [""],
+    "yOrder": -1,
+    "birth": { "year": 273, "month": 1, "day": 9 },
+    "intro": {
+        "year": 28,
+        "month": 6,
+        "day": 19
+    },
+    "data": {
+        "orientation": "orientation",
+        "gender": "Male_P",
+        "age": "age",
+        "race": "race"
+    },
+    "appearance": {
+        "skin": "skin",
+        "text": "text",
+        "height": "height",
+        "hair": "hair",
+        "weight": "weight",
+        "eyes": "eyes"
+    },
+    "bio": "text"
+}

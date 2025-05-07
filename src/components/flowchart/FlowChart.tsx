@@ -25,6 +25,8 @@ import CharacterNodeSide from "./components/CharacterNodeSide";
 import CustomEdge from "./components/CustomEdge";
 import { CustomNode } from "./utility/NodeUtility";
 import TimelineEventNode from "./components/TimelineEventNode";
+import TimelineEdge from "./components/TimelineEdge";
+import { Tooltip } from "react-tooltip";
 
 export interface IPosition {
     x: number;
@@ -144,8 +146,14 @@ const nodeTypes: CustomNodeType = {
     [ENodeTypes.timelineEvent]: TimelineEventNode,
 };
 
+enum EEdgeTypes {
+    customEdge = "customEdge",
+    timelineEdge = "timelineEdge",
+}
+
 const edgeTypes: CustomNodeType = {
-    customEdge: CustomEdge,
+    [EEdgeTypes.customEdge]: CustomEdge,
+    [EEdgeTypes.timelineEdge]: TimelineEdge,
 };
 
 const defaultViewport: Viewport = { x: 500, y: 300, zoom: 0.5 };
@@ -170,6 +178,11 @@ const FlowChart = (props: PropsWithRef<IFlowchartProps>) => {
         modalManagerContext.onShowModal(payload);
     }; */
 
+    const [tooltipData, setTooltipData] = React.useState<{
+        id: string;
+        text: string;
+    }>();
+
     const handleWheel = (e: React.WheelEvent) => {
         if (e.ctrlKey) {
             e.stopPropagation();
@@ -192,26 +205,36 @@ const FlowChart = (props: PropsWithRef<IFlowchartProps>) => {
                             nodes={nodes as Node[]}
                             edges={edges}
                             nodesDraggable={false}
-                            elementsSelectable={false}
+                            elementsSelectable={true}
+                            // onNodeClick={() => console.log("node clicked")}
+                            // onEdgeClick={() => console.log("edge clicked")}
+                            /* onEdgeMouseEnter={(event, edge) =>
+                                setTooltipData({
+                                    id: edge.id,
+                                    text: edge.data.startDate.toString(),
+                                })
+                            } */
+                            onEdgeMouseLeave={() => setTooltipData(undefined)}
                             connectionLineType={ConnectionLineType.Step}
                             nodeTypes={nodeTypes}
                             edgeTypes={edgeTypes}
                             minZoom={0}
                             maxZoom={10}
                             defaultViewport={defaultViewport}
+                            nodeOrigin={[0, 0.5]}
                         >
                             <Background
                                 id="background-lines1"
                                 color="#00000030"
                                 variant={BackgroundVariant.Lines}
-                                gap={300}
+                                gap={336}
                                 offset={2}
                             />
                             <Background
                                 id="background-lines2"
                                 color="#00000020"
                                 variant={BackgroundVariant.Lines}
-                                gap={50}
+                                gap={28}
                                 offset={2}
                             />
                         </ReactFlow>
@@ -223,6 +246,14 @@ const FlowChart = (props: PropsWithRef<IFlowchartProps>) => {
                     </div>
                 </ReactFlowProvider>
             </FlowChartContext.Provider>
+            <Tooltip
+                anchorSelect={tooltipData ? "#" + tooltipData.id : undefined}
+                isOpen={!!tooltipData}
+                place="top"
+                clickable
+            >
+                {tooltipData?.text}
+            </Tooltip>
         </div>
     );
 };

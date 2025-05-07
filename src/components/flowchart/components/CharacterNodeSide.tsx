@@ -4,7 +4,7 @@ import {
     getCharacterImagePath,
     getLocalFilePath,
 } from "components/utility/getLocalFile";
-import { ICharacter } from "content/characters/Characters";
+import { ICharacter } from "content/characters/Character";
 import { Gender } from "content/characters/Gender";
 import { CustomNode } from "../utility/NodeUtility";
 import { Handle, Position } from "reactflow";

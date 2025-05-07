@@ -1,4 +1,3 @@
-import { IAge } from "content/characters/Characters";
 import { INodePosition } from "./NodePosition";
 
 export interface ITimelineCharacterNode extends INodePosition {
@@ -8,8 +7,8 @@ export interface ITimelineCharacterNode extends INodePosition {
 
 export interface ITimelineEventNode extends INodePosition {
     type: TimelineEventNodeType;
-    currentAge?: IAge;
-    offsetAge?: IAge;
+    currentAge?: string;
+    offsetAge?: string;
     agePos: "top" | "bottom";
 }
 

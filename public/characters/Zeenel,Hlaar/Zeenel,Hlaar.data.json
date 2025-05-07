@@ -1,32 +1,28 @@
 {
-  "id": "zeenelHlaar",
-  "path": "Zeenel,Hlaar",
-  "name": "Zeenel Hlaar",
-  "player": "tsuzumi",
-  "fullName": "Zeenel Hlaar",
-  "firstName": [
-    "Zeenel"
-  ],
-  "lastName": [
-    "Hlaar"
-  ],
-  "data": {
-    "orientation": "orientation",
-    "gender": "Female_VP",
-    "age": "age",
-    "introAge": {
-      "year": 32,
-      "month": 4
+    "id": "zeenelHlaar",
+    "path": "Zeenel,Hlaar",
+    "name": "Zeenel Hlaar",
+    "player": "tsuzumi",
+    "fullName": "Zeenel Hlaar",
+    "firstName": ["Zeenel"],
+    "lastName": ["Hlaar"],
+    "yOrder": 0,
+    "birth": {
+        "year": 300,
+        "month": 4,
+        "day": 12
     },
-    "race": "race"
-  },
-  "appearance": {
-    "skin": "skin",
-    "text": "text",
-    "height": "height",
-    "hair": "hair",
-    "weight": "weight",
-    "eyes": "eyes"
-  },
-  "bio": "text"
+    "data": {
+        "orientation": "orientation",
+        "gender": "Female_VP"
+    },
+    "appearance": {
+        "skin": "skin",
+        "text": "text",
+        "height": "height",
+        "hair": "hair",
+        "weight": "weight",
+        "eyes": "eyes"
+    },
+    "bio": "text"
 }

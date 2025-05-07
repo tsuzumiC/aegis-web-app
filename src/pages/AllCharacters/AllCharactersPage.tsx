@@ -5,7 +5,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
 
 import CharacterListItem from "components/character/CharacterListItem";
-import { ICharacter, ICharacterListItem } from "content/characters/Characters";
+import { ICharacter, ICharacterListItem } from "content/characters/Character";
 import { getLocalFilePath } from "components/utility/getLocalFile";
 
 const AllCharactersPage: React.FC = () => {

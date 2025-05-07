@@ -1,72 +1,80 @@
 .character-node {
     position: relative;
-    width: 300px;
-    height: 500px;
+    align-items: center;
+
+    display: grid;
+
+    grid-template-columns: [edge-left] 10px [image-left] 150px [image-right icons-left] 50px [icons-right] 10px [edge-right];
+    grid-template-rows: [edge-top] 10px [image-top] 200px [image-bottom name-top] 50px [name-bottom] 10px [edge-bottom];
+
+    gap: 0;
 
     cursor: pointer;
 
+    &--background {
+        grid-area: edge-top / edge-left / edge-bottom / edge-right;
+
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+
+        box-sizing: border-box;
+
+        background-color: white;
+
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+
     &--image {
+        grid-area: image-top / image-left / image-bottom / image-right;
+
+        border-radius: 10px;
     }
 
     &--name {
-        box-sizing: border-box;
-        position: absolute;
+        grid-area: name-top / image-left / name-bottom / icons-right;
+
+        position: relative;
+
         display: flex;
         justify-content: center;
         align-items: center;
 
-        left: 0;
-        bottom: 0;
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
 
-        width: 100%;
-        height: 125px;
+        &--text {
+            flex-grow: 1;
 
-        padding: 10px;
+            overflow: hidden;
 
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 25px;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1;
 
-        font-size: 32px;
-        font-weight: 600;
-        text-align: center;
+            text-align: center;
+        }
     }
 
     &--handle {
         position: absolute;
 
+        background-color: transparent;
+        border: none;
+
         &.handle {
-            &-misc1 {
-                top: 0;
-                left: 16.66%;
-            }
             &-mother {
-                top: 0;
                 left: 25%;
             }
-            &-misc2 {
-                top: 0;
-                left: 33.33%;
-            }
             &-center {
-                top: 0;
                 left: 50%;
-            }
-            &-misc3 {
-                top: 0;
-                left: 66.67%;
             }
             &-father {
-                top: 0;
                 left: 75%;
             }
-            &-misc4 {
-                top: 0;
-                left: 83.34%;
-            }
-            &-out {
-                bottom: 0;
-                left: 50%;
+            &-right {
+                top: 50%;
+                right: 0;
             }
         }
     }

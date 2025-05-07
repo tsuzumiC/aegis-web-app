@@ -4,9 +4,10 @@ import {
     getCharacterImagePath,
     getLocalFilePath,
 } from "components/utility/getLocalFile";
-import { ICharacter } from "content/characters/Characters";
+import { ICharacter } from "content/characters/Character";
 import { Gender } from "content/characters/Gender";
 import { CustomNode } from "../utility/NodeUtility";
+import { Handle, Position } from "reactflow";
 
 const CharacterColors = {
     [Gender.Female_V]: "#ff66aa",
@@ -37,34 +38,14 @@ const CharacterNode: React.FC<CharacterNodeProps> = (props) => {
     };
 
     return (
-        <div className="character-node">
+        <div className="character-node" id={data.id}>
             <div
-                id={`misc1-handle-${data.id}`}
-                className="character-node--handle handle-misc1"
-            />
-            <div
-                id={`mother-handle-${data.id}`}
-                className="character-node--handle handle-mother"
-            />
-            <div
-                id={`misc2-handle-${data.id}`}
-                className="character-node--handle handle-misc2"
-            />
-            <div
-                id={`center-handle-${data.id}`}
-                className="character-node--handle handle-center"
-            />
-            <div
-                id={`misc3-handle-${data.id}`}
-                className="character-node--handle handle-misc3"
-            />
-            <div
-                id={`father-handle-${data.id}`}
-                className="character-node--handle handle-father"
-            />
-            <div
-                id={`misc4-handle-${data.id}`}
-                className="character-node--handle handle-misc4"
+                className="character-node--background"
+                style={{
+                    backgroundColor: data.data?.gender
+                        ? CharacterColors[data.data.gender]
+                        : "#ffffff",
+                }}
             />
             <img
                 className="character-node--image"
@@ -72,19 +53,50 @@ const CharacterNode: React.FC<CharacterNodeProps> = (props) => {
                 alt={_image.alt}
                 onError={handleImageError}
             />
-            <div
-                className="character-node--name"
-                style={{
-                    backgroundColor: data.data?.gender
-                        ? CharacterColors[data.data.gender]
-                        : "#ffffff",
-                }}
-            >
-                {data.name}
+            <div className="character-node--name">
+                <div className="character-node--name--text">{data.name}</div>
             </div>
-            <div
-                id={`out-handle-${data.id}`}
-                className="character-node--handle handle-out"
+            <Handle
+                type="target"
+                position={Position.Top}
+                id={`mother-top-handle-${data.id}`}
+                className="character-node--handle handle-mother"
+            />
+            <Handle
+                type="target"
+                position={Position.Top}
+                id={`center-top-handle-${data.id}`}
+                className="character-node--handle handle-center"
+            />
+            <Handle
+                type="target"
+                position={Position.Top}
+                id={`father-top-handle-${data.id}`}
+                className="character-node--handle handle-father"
+            />
+            <Handle
+                type="target"
+                position={Position.Bottom}
+                id={`mother-bottom-handle-${data.id}`}
+                className="character-node--handle handle-mother"
+            />
+            <Handle
+                type="target"
+                position={Position.Bottom}
+                id={`center-bottom-handle-${data.id}`}
+                className="character-node--handle handle-center"
+            />
+            <Handle
+                type="target"
+                position={Position.Bottom}
+                id={`father-bottom-handle-${data.id}`}
+                className="character-node--handle handle-father"
+            />
+            <Handle
+                type="source"
+                position={Position.Right}
+                id={`right-handle-${data.id}`}
+                className="character-node--handle handle-right"
             />
         </div>
     );

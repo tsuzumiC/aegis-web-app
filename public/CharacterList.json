@@ -1,122 +1,12 @@
 [
   {
-    "id": "adrianHlaar",
-    "name": "Adrian Hlaar",
-    "path": "Adrian,Hlaar"
-  },
-  {
-    "id": "agnesEriksdotter",
-    "name": "Agnes Eriksdotter",
-    "path": "Agnes,Eriksdotter"
-  },
-  {
-    "id": "bellindaHlaar",
-    "name": "Bellinda Hlaar",
-    "path": "Bellinda,Hlaar"
-  },
-  {
-    "id": "dominiqueHlaar",
-    "name": "Dominique Hlaar",
-    "path": "Dominique,Hlaar"
-  },
-  {
-    "id": "eliasHlaar",
-    "name": "Elias Hlaar",
-    "path": "Elias,Hlaar"
-  },
-  {
-    "id": "ghan",
-    "name": "Ghan",
-    "path": "Ghan"
-  },
-  {
-    "id": "iljaEriksdotter",
-    "name": "Ilja Eriksdotter",
-    "path": "Ilja,Eriksdotter"
-  },
-  {
-    "id": "ivana",
-    "name": "Ivana",
-    "path": "Ivana"
-  },
-  {
-    "id": "kristineHlaar",
-    "name": "Kristine Hlaar",
-    "path": "Kristine,Hlaar"
-  },
-  {
-    "id": "lolaHlaar",
-    "name": "Lola Hlaar",
-    "path": "Lola,Hlaar"
-  },
-  {
-    "id": "marnikHlaar",
-    "name": "Marnik Hlaar",
-    "path": "Marnik,Hlaar"
-  },
-  {
-    "id": "melek",
-    "name": "Melek",
-    "path": "Melek"
-  },
-  {
-    "id": "perseis",
-    "name": "Perseis",
-    "path": "Perseis"
-  },
-  {
-    "id": "phellinaLogsteadHlaar",
-    "name": "Phellina Logstead Hlaar",
-    "path": "Phellina,Logstead_Hlaar"
-  },
-  {
-    "id": "rika",
-    "name": "Rika",
-    "path": "Rika"
-  },
-  {
-    "id": "stefanos",
-    "name": "Stefanos",
-    "path": "Stefanos"
-  },
-  {
-    "id": "sulinaLogsteadHlaar",
-    "name": "Sulina Logstead Hlaar",
-    "path": "Sulina,Logstead_Hlaar"
-  },
-  {
-    "id": "tinaHlaar",
-    "name": "Tina Hlaar",
-    "path": "Tina,Hlaar"
-  },
-  {
-    "id": "varneHlaar",
-    "name": "Varne Hlaar",
-    "path": "Varne,Hlaar"
-  },
-  {
-    "id": "viatrel",
-    "name": "Viatrel",
-    "path": "Viatrel"
-  },
-  {
-    "id": "yaliseHlaar",
-    "name": "Yalise Hlaar",
-    "path": "Yalise,Hlaar"
+    "id": "tarluk",
+    "name": "Tarluk",
+    "path": "Tarluk"
   },
   {
     "id": "zeenelHlaar",
     "name": "Zeenel Hlaar",
     "path": "Zeenel,Hlaar"
-  },
-  {
-    "id": "zildaHlaar",
-    "name": "Zilda Hlaar",
-    "path": "Zilda,Hlaar"
-  },
-  {
-    "id": "zumiHlaar",
-    "name": "Zumi Hlaar",
-    "path": "Zumi,Hlaar"
   }
 ]

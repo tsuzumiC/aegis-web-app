@@ -2,7 +2,7 @@ import { Node } from "reactflow";
 
 export interface XYPosition {
     x: number;
-    y?: number;
+    y: number;
 }
 
 export interface CustomNode<T = any> extends Omit<Node<T>, "position"> {
@@ -14,5 +14,5 @@ export const multiplyPosition = (
     multiplier = 50
 ): XYPosition => ({
     x: position.x * multiplier,
-    y: position.y !== undefined ? position.y * multiplier : undefined,
+    y: position.y * multiplier,
 });

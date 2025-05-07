@@ -5,7 +5,7 @@ import FlowChart from "components/flowchart/FlowChart";
 import axios from "axios";
 
 import { useEffect, useMemo, useState } from "react";
-import { ICharacter, ICharacterListItem } from "content/characters/Characters";
+import { ICharacter, ICharacterListItem } from "content/characters/Character";
 
 import {
     CustomNode,

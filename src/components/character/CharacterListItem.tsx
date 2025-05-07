@@ -6,8 +6,7 @@ import {
 } from "components/utility/getLocalFile";
 
 import EmptyImage from "components/EmptyImage";
-import { useGetCharacterById } from "content/characters/api/hooks";
-import { AppearanceTypeOrder, ICharacter } from "content/characters/Characters";
+import { AppearanceTypeOrder, ICharacter } from "content/characters/Character";
 
 interface IProps {
     character: ICharacter;
